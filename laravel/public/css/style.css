@@ -1,0 +1,69 @@
+
+.fc-col-header-cell-cushion,
+.fc-daygrid-day-number,
+.fc-daygrid-day-top{
+    color: #333;
+}
+.fc-day-sat{
+    background-color: #79bef7;
+    z-index: -1;
+
+}
+.fc-day-sun{
+    background-color: #f4d0df;
+    z-index: -1;
+
+}
+.fc .fc-toolbar-title{
+color:#333;
+font-weight: bold;
+font-size: 2.75em;
+
+
+}
+/* カレンダーの日付 */
+.fc .fc-daygrid-day-number {
+    padding: 8px;
+    position: relative;
+    z-index: 4;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* カレンダーの枠線ここから */
+.fc-theme-standard td{
+    border: 2px solid #cce3f6 ;
+}
+.fc-theme-standard .fc-scrollgrid{
+    border: 2px solid #cce3f6 ;
+    border-right:none;
+
+} 
+.fc-theme-standard td, .fc-theme-standard th{
+    border: 2px solid #cce3f6 ;
+}
+/* カレンダー枠線ここまで */
+
+/* eventアイコンの右margin */
+.fc-direction-ltr .fc-daygrid-event.fc-event-end, .fc-direction-rtl .fc-daygrid-event.fc-event-start{
+    margin-right: 20px;
+}
+/* eventアイコンの左margin */
+.fc-direction-ltr .fc-daygrid-event.fc-event-start, .fc-direction-rtl .fc-daygrid-event.fc-event-end{
+    margin-left: 20px;
+}
+/* eventアイコンの丸み/ */
+.fc-daygrid-event{
+    border-radius: 16px;
+    box-shadow: 0 1px 0 #333; /* 影の太さ・色 */
+
+}
+
+
+.fc .fc-daygrid-event{
+margin-top: 2px;
+}
+.fc-daygrid-event{
+font-size: 1em;
+text-align: center;
+
+}
