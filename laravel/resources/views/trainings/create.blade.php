@@ -17,7 +17,7 @@
                 @method('get')
             </div>
             <div class="py-4 flex absolute inset-y-0 right-5">
-            <a href="{{ route('trainings.Mymenu') }}" class="text-white text-xl font-bold">/マイメニューを記録する</a>
+            <a href="{{ route('trainings.Mymenu') }}" class="text-white text-xl font-bold">/マイメニューを登録する</a>
             </div>
         </div>
     </header>
@@ -26,7 +26,8 @@
     <main class="grow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="py-[50px]">
-                <p class="text-2xl font-bold text-center">今日の積み上げを記録しましょう！！</p>
+                <p class="text-2xl font-bold text-center">今日のトレーニングを記録しましょう！！</p>
+                
             </div>
         </div>
         <form action="{{route('store') }}" method="post">

@@ -92,8 +92,13 @@ class TrainingController extends Controller
             $training_date->save();
             // set内容の登録
             $sets = [
-            ["weight" => $request->input("first_weight"), "rep" => $request->input("first_rep"), 
-            "set_id" => 1, "training_id" => $training_date["id"]],
+            
+                [
+                    "weight" => $request->input("first_weight"), 
+                    "rep" => $request->input("first_rep"), 
+                    "set_id" => 1, 
+                    "training_id" => $training_date["id"]
+                ],
             ["weight" => $request->input("second_weight"), "rep" => $request->input("second_rep"), 
             "set_id" => 2, "training_id" => $training_date["id"]],
             ["weight" => $request->input("third_weight"), "rep" => $request->input("third_rep"), 

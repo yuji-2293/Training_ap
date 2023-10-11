@@ -78,11 +78,12 @@
                 <a href="{{route('trainings.index')}}" class="text-white text-xl font-bold">筋トレ記録管理アプリ</a>
             </div>
             <div class="py-4 flex absolute inset-y-0 right-5">
-
-                <a href="{{ route('trainings.create') }}" class="text-white text-xl font-bold">トレーニングを記録する</a>
+                <a href="{{ route('trainings.create') }}" class="text-white text-xl font-bold">トレーニングの登録/マイメニューの登録</a>
                 @method('get')
-                
-                <a href="{{ route('trainings.Mymenu') }}" class="text-white text-xl font-bold">/マイメニューを記録する</a>
+            </div>
+            <!-- マイメニュyー確認ができたら変更する -->
+            <div class="py-4 flex ml-auto mr-auto">
+                <p class="text-white text-xl font-bold">マイメニューを確認する</p>
             </div>
         </div>
     </header>

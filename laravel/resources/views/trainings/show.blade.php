@@ -26,7 +26,7 @@
                 <main class="grow">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6">
                         <div class="py-[50px]">
-                            <p class="text-2xl font-bold text-center">あなたが積み上げた記録です！！</p>
+                            <p class="text-3xl font-bold text-center">{{ $events->start}}の記録です</p>
                         </div>
                 </div>
                 <div class="flex flex-col items-center">
