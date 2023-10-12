@@ -22,7 +22,16 @@
                 </div>
         </header>
         <main class="grow">
-
+        <div>
+    <label>登録するトレーニング部位</label>
+    <small class="">※必須</small>
+    <select type="text" class="form-control" name="part_id" required>
+        <option disabled style='display:none;' >選択してください</option>
+        @foreach($parts as $part)
+            <option value="{{ $part->id }}">{{ $part->name }}</option>
+        @endforeach
+    </select>
+</div>
 
 
 

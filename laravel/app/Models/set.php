@@ -16,5 +16,5 @@ class set extends Model
     public function training()
     {
     return $this->belongsTo(training::class);
-}
+    }
 }

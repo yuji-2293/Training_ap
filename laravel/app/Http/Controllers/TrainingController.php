@@ -8,6 +8,9 @@ use App\Models\set;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\JsonResponse;
+use App\Models\training_part;
+use App\Models\mymenu_post;
+
 
 
 use App\Models\Training as ModelsTraining;
@@ -25,10 +28,7 @@ class TrainingController extends Controller
         return view ('trainings.index');
      }
 
-     public function Mymenu(Request $request)
-     {
-    return view('trainings.Mymenu');
-    }
+
 
     public function Json(Request $request, $id = -1)
         {

@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\PostController;
 use Illuminate\Http\Request;
+
 
 Route::resource('trainings', App\Http\Controllers\TrainingController::class);
 
@@ -23,7 +25,7 @@ Route::get('/create', [App\Http\Controllers\TrainingController::class, 'create']
 Route::get('/events/{id}' ,[App\Http\Controllers\TrainingController::class, 'show'])->name('events.show');
 Route::DELETE('/events/{id}' ,[App\Http\Controllers\TrainingController::class, 'destroy'])->name('trainings.delete');
 
- Route::get('/Mymenu',[App\Http\Controllers\TrainingController::class,'Mymenu'])->name('trainings.Mymenu');
+ Route::get('/Mymenu',[App\Http\Controllers\PostController::class,'Mymenu'])->name('trainings.Mymenu');
 
 
 
