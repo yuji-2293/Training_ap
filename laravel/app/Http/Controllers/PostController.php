@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use App\Models\training_part;
-use App\Models\mymenu_post;
+use App\Models\My_menu_Post;
 
 class PostController extends Controller
 {
@@ -36,7 +36,19 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = ['name' => 'required|max:100',];
+            $messages = ['required' => 'トレーニング名を記入してください', 
+                         'max'=> '100文字以下にしてください',];
+                         $validator = Validator::make($request->all(), $rules, $messages);
+
+                            if ($validator->fails()){
+                            return redirect('Mymenu')->withErrors($validator)->withInput();}
+
+                            $part_data = new My_menu_post;
+                            $part_data->name =  $request->input('name');
+                            $part_data->part_id = $request->input('part_id');
+                            $part_data->save();
+                            return view('trainings.index');
     }
 
     /**
@@ -50,9 +62,11 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(My_menu_Post $My_menu_post)
     {
-        //
+        $parts = training_part::all();
+        dd($My_menu_post);
+        return view('trainings.Mymenu',compact('parts','My_menu_post'));
     }
 
     /**
