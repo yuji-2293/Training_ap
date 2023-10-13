@@ -22,16 +22,38 @@
                 </div>
         </header>
         <main class="grow">
-        <div>
-    <label>登録するトレーニング部位</label>
-    <small class="">※必須</small>
-    <select type="text" class="form-control" name="part_id" required>
-        <option disabled style='display:none;' >選択してください</option>
-        @foreach($parts as $part)
-            <option value="{{ $part->id }}">{{ $part->name }}</option>
-        @endforeach
-    </select>
-</div>
+            <form action="{{route('part_store') }}" method="POST">
+                <div>
+                    <label>登録するトレーニング部位</label>
+                    <small class="">※必須</small>
+                    <select type="text" class="form-control" name="part_id" id="part_id" required>
+                        <option disabled style='display:none;' >選択してください</option>
+                        @foreach($parts as $part)
+                            <option value="{{ $part->id }}">{{ $part->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div>
+                    <small class="">※入力欄</small>
+                    <input type="text" class="" name="name" id="name" placeholder="マイトレーニング">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                    <button type="submit" class="m-1 p-1 bg-sky-600 text-white  hover:bg-sky-900 ">登録する</button>
+                        @error('name')
+                            <div class="mt-3">
+                                <p class="text-red-500">
+                                    {{$message}}
+                                </p>
+                            </div>
+                        @enderror
+                    
+                </div>
+              
+               
+                
+
+
+            </form>
+
 
 
 

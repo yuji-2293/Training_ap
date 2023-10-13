@@ -31,7 +31,7 @@
             </div>
         </div>
         <form action="{{route('store') }}" method="post">
-        @csrf
+         @csrf
             <div class="flex flex-col items-center">
                             <label class="w-full max-w-3xl mx-auto">
                                 <input
