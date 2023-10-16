@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use App\Models\training_part;
 use App\Models\My_menu_Post;
+use App\Http\Requests\CorpRequest;
 
 class PostController extends Controller
 {
@@ -17,10 +18,10 @@ class PostController extends Controller
     {
         //
     }
-    public function Mymenu(Request $request)
+    public function Mymenu(My_menu_Post $My_menu_post)
     {
        $parts = training_part::all();
-       return view('trainings.Mymenu',compact('parts'));
+       return view('trainings.Mymenu',compact('parts','My_menu_post'));
    }
 
     /**
@@ -36,8 +37,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $rules = ['name' => 'required|max:100',];
-            $messages = ['required' => 'トレーニング名を記入してください', 
+
+        $rules = ['name' => 'required|max:100',];                
+
+            $messages = ['required' => '必要事項が入力されていません', 
                          'max'=> '100文字以下にしてください',];
                          $validator = Validator::make($request->all(), $rules, $messages);
 
@@ -48,6 +51,7 @@ class PostController extends Controller
                             $part_data->name =  $request->input('name');
                             $part_data->part_id = $request->input('part_id');
                             $part_data->save();
+                            // マイメニュー確認画面ができたらそのページに遷移する
                             return view('trainings.index');
     }
 

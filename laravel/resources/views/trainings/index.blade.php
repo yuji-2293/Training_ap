@@ -84,9 +84,9 @@
                 @method('get')
             </div>
             <!-- 確認 -->
-            <!-- <div class="py-4 flex ml-auto mr-auto">
+            <div class="py-4 flex ml-auto mr-auto">
                 <p class="text-white text-xl font-bold">マイメニューを確認する</p>
-            </div> -->
+            </div>
         </div>
     </header>
 

@@ -116,7 +116,7 @@
                                     </tbody>
                                 </table> 
 
-                            <button type="submit" class="m-4 p-4 bg-sky-600 text-white w-full max-w-xs hover:bg-sky-900 transition-colors">
+                            <button type="submit" class="m-4 p-4 bg-sky-600 text-white w-full max-w-xs md:hover:bg-sky-300 bg-sky-600 rounded-md  hover:bg-sky-300 transition-colors">
                                 登録する
                             </button>
             </div>
