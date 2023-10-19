@@ -14,8 +14,6 @@
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
     <!-- jquery CDN読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-
  </head>
  
  <!-- javascript -->
@@ -75,50 +73,47 @@
 <!-- HTML -->
 <body class="flex flex-col min-h-[100vh] font-mono bg-slate-200">
 <header class="bg-sky-600">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 flex relative">
-    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-  </svg>
-</button>
-
-<!-- Dropdown menu -->
-<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-      <li>
-      <a href="{{ route('trainings.Mymenu') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">マイメニューの登録</a>
-      </li>
-      <li>       
-         <a href="{{ route('trainings.Mymenu') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">マイメニューの確認</a>
-      </li>
-      <li>
-        <a href="{{ route('trainings.create') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">ワークアウトの登録</a>
-      </li>
-
-    </ul>
-</div>
-            <div class="py-4">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 flex relative">    
+             <div class="py-4">
                 <a href="{{route('trainings.index')}}" class="text-white text-xl font-bold">筋トレ記録管理アプリ</a>
+             </div>
+    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white text-xl font-bold py-4 flex absolute inset-y-0 right-5 hover:bg-sky-400 
+              rounded-lg text-center inline-flex items-center " type="button">メニューを表示（仮）
+            <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
+   </button>
+</div> 
+            <!-- Dropdown menu -->
+            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                <li>
+                <a href="{{ route('trainings.Mymenu') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">マイメニューの登録</a>
+                </li>
+                <li>       
+                    <a href="{{ route('trainings.Mymenu') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">マイメニューの確認</a>
+                </li>
+                <li>
+                    <a href="{{ route('trainings.create') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">ワークアウトの登録</a>
+                </li>
+                </ul>
             </div>
-            <div class="py-4 flex absolute inset-y-0 right-5">
-                <a href="{{ route('trainings.create') }}" class="text-white text-xl font-bold">トレーニングの登録/</a>
-                <a href="{{ route('trainings.Mymenu') }}" class="text-white text-xl font-bold">マイメニューの登録</a>
 
-                @method('get')
-            </div>
-            <!-- 確認 -->
-            <div class="py-4 flex ml-auto mr-auto">
+                <!--<div class="py-4 flex absolute inset-y-0 right-5">
+                    <a href="{{ route('trainings.create') }}" class="text-white text-xl font-bold">トレーニングの登録/</a>
+                    <a href="{{ route('trainings.Mymenu') }}" class="text-white text-xl font-bold">マイメニューの登録</a>
+                    @method('get')
+                </div>
+                <div class="py-4 flex ml-auto mr-auto">
                 <p class="text-white text-xl font-bold">マイメニューを確認する</p>
-            </div>
-        </div>
+            </div>-->
+
     </header>
 
 <!-- calendar.jsを読み込む -->
     <div id="app">
-        
         <div class="m-auto w-50 m-7 p-7">
-             
             <div id='calendar' class="bg-white p-7"></div>
-           
         </div>
     </div>
     <footer class="bg-slate-500">

@@ -32,6 +32,7 @@
         </div>
         <form action="{{route('store') }}" method="post">
          @csrf
+         <!-- トレーニング名入力欄 -->
             <div class="flex flex-col items-center">
                             <label class="w-full max-w-3xl mx-auto">
                                 <input
@@ -90,33 +91,44 @@
                                             </tr>
 
                                             <tr class="h-24">
+                                                <!-- weightカラム -->
                                                 <td class="px-6 py-4">
-                                                <input type="number" placeholder="1set" step="0.5" inputmode="decimal" name="first_weight" value="{{old('first_weight')}}">
+                                                <input class="rounded-md h-10 border-separate border border-slate-300" type="number" placeholder="1set" step="0.5" inputmode="decimal" name="first_weight" value="{{old('first_weight')}}">
                                                 <label for="weight">:重量（kg）</label></td>
-                                                <td class="px-6 py-4 h-24"><input type="number" placeholder="1set" name="first_rep" value="{{old('first_rep')}}">
+                                                <!-- repカラム -->
+                                                <td class="px-6 py-4 h-24">
+                                                <input class="rounded-md h-10 border-separate border border-slate-300" type="number" placeholder="1set" step="0.5" name="first_rep" value="{{old('first_rep')}}">
                                                 <label for="rep">:回数（rep）</label></td>
                                                 @method('post')
                                             </tr> 
 
                                             <tr class="h-24">
-                                                <td class="px-6 py-4"><input type="number" placeholder="2set" step="0.5" name="second_weight" value="{{old('second_weight')}}"> 
-                                                <label for="weight">:重量（kg）</label></td></td>
-                                                <td class="px-6 py-4"><input type="number" placeholder="2set" name="second_rep" value="{{old('second_rep')}}">
-                                                <label for="weight">:回数（rep）</label></td></td>
+                                                <!-- weightカラム -->
+                                                <td class="px-6 py-4">
+                                                <input class="rounded-md h-10 border-separate border border-slate-300" type="number" placeholder="2set" step="0.5" name="second_weight" value="{{old('second_weight')}}">
+                                                <label for="weight">:重量（kg）</label></td>
+                                                <!-- repカラム -->
+                                                <td class="px-6 py-4">
+                                                <input class="rounded-md h-10 border-separate border border-slate-300" type="number" placeholder="2set" step="0.5" name="second_rep" value="{{old('second_rep')}}">
+                                                <label for="weight">:回数（rep）</label></td>
                                                 @method('post')
                                             </tr>    
                                            <tr class="h-24">
-                                                <td class="px-6 py-4"><input type="number" placeholder="3set" step="0.5" name="third_weight" value="{{old('third_weight')}}">
-                                                <label for="weight">:重量（kg）</label></td></td>
-                                                <td class="px-6 py-4"><input type="number" placeholder="3set" name="third_rep" value="{{old('third_rep')}}">
-                                                <label for="weight">:回数（rep）</label></td></td>
+                                                <!-- weightカラム -->
+                                                <td class="px-6 py-4">
+                                                <input class="rounded-md h-10 border-separate border border-slate-300" type="number" placeholder="3set" step="0.5" name="third_weight" value="{{old('third_weight')}}">
+                                                <label for="weight">:重量（kg）</label></td>
+                                                <!-- repカラム -->
+                                                <td class="px-6 py-4">
+                                                <input class="rounded-md h-10 border-separate border border-slate-300" type="number" placeholder="3set" step="0.5" name="third_rep" value="{{old('third_rep')}}">
+                                                <label for="weight">:回数（rep）</label></td>
 
                                                 @method('post')
                                            </tr>  
                                     </tbody>
                                 </table> 
 
-                            <button type="submit" class="m-4 p-4 bg-sky-600 text-white w-full max-w-xs md:hover:bg-sky-300 bg-sky-600 rounded-md  hover:bg-sky-300 transition-colors">
+                            <button type="submit" class="m-4 p-4 bg-sky-600 text-white w-full max-w-xs md:hover:bg-sky-300 bg-sky-600  hover:bg-sky-300 transition-colors">
                                 登録する
                             </button>
             </div>
