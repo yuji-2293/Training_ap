@@ -98,16 +98,6 @@
                 </li>
                 </ul>
             </div>
-
-                <!--<div class="py-4 flex absolute inset-y-0 right-5">
-                    <a href="{{ route('trainings.create') }}" class="text-white text-xl font-bold">トレーニングの登録/</a>
-                    <a href="{{ route('trainings.Mymenu') }}" class="text-white text-xl font-bold">マイメニューの登録</a>
-                    @method('get')
-                </div>
-                <div class="py-4 flex ml-auto mr-auto">
-                <p class="text-white text-xl font-bold">マイメニューを確認する</p>
-            </div>-->
-
     </header>
 
 <!-- calendar.jsを読み込む -->
