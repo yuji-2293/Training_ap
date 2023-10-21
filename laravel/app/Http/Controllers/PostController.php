@@ -29,7 +29,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        $POST = My_menu_post::all();
+        $parts = training_part::all();
+        return view('trainings.Mymenu_post',compact('POST', 'parts'));
     }
 
     /**

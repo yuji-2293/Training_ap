@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
  Route::get('/Mymenu',[App\Http\Controllers\PostController::class,'Mymenu'])->name('trainings.Mymenu');
  Route::POST('/store',[App\Http\Controllers\PostController::class,'store'])->name('part_store');
+ Route::get('/create_post',[App\Http\Controllers\PostController::class,'create'])->name('part_create');
 
 Route::resource('trainings', App\Http\Controllers\TrainingController::class);
 
@@ -19,7 +20,6 @@ Route::post('/create', [App\Http\Controllers\TrainingController::class, 'store']
 Route::get('/create', [App\Http\Controllers\TrainingController::class, 'create'])->name('trainings.create');
 Route::get('/events/{id}' ,[App\Http\Controllers\TrainingController::class, 'show'])->name('events.show');
 Route::DELETE('/events/{id}' ,[App\Http\Controllers\TrainingController::class, 'destroy'])->name('trainings.delete');
-
 
 
 

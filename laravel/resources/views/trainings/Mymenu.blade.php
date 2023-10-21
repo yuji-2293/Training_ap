@@ -28,7 +28,7 @@
                     <a href="{{ route('trainings.Mymenu') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">マイメニューの登録</a>
                     </li>
                     <li>       
-                        <a href="{{ route('trainings.Mymenu') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">マイメニューの確認</a>
+                        <a href="{{route('part_create') }}"class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">マイメニューの確認</a>
                     </li>
                     <li>
                         <a href="{{ route('trainings.create') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">ワークアウトの登録</a>
@@ -72,7 +72,10 @@
                                         
                     </div>
                             <div class="">
-                                <a href="" type="button" class="shadow-sm border border-slate-300 block rounded-md p-3 mt-20 md:hover:bg-sky-300 bg-sky-600  hover:bg-sky-300 text-white ">>>登録したマイメニューを確認する</a>
+                                <a href="{{route('part_create') }}" type="button" class="shadow-sm border border-slate-300 block 
+                                rounded-md p-3 mt-20 md:hover:bg-sky-300 bg-sky-600
+                                hover:bg-sky-300 text-white ">>>登録したマイメニューを確認する</a>
+                                @method('get')
 
                             </div>
 
@@ -94,5 +97,7 @@
                     </div>
                 </div>
             </footer>
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+
 </body>
 </html>
