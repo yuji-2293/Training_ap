@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>マイメニュー</title>
+    <title>マイメニュー登録</title>
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
 </head>
@@ -75,7 +75,6 @@
                                 <a href="{{route('part_create') }}" type="button" class="shadow-sm border border-slate-300 block 
                                 rounded-md p-3 mt-20 md:hover:bg-sky-300 bg-sky-600
                                 hover:bg-sky-300 text-white ">>>登録したマイメニューを確認する</a>
-                                @method('get')
 
                             </div>
 
@@ -97,7 +96,6 @@
                     </div>
                 </div>
             </footer>
-<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 
 </body>
 </html>

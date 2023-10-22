@@ -29,7 +29,7 @@
                     <a href="{{ route('trainings.Mymenu') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">マイメニューの登録</a>
                     </li>
                     <li>       
-                        <a href="{{ route('trainings.Mymenu') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">マイメニューの確認</a>
+                    <a href="{{route('part_create') }}"class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">マイメニューの確認</a>
                     </li>
                     <li>
                         <a href="{{ route('trainings.create') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">ワークアウトの登録</a>
@@ -86,9 +86,12 @@
                                         </td> 
                                         <td class="px-6 py-4 w-1/2">
                                             <p class="text-center">{{$set->rep}}回</p>
+                                            {{ $set->weight * $set->rep }}
                                     </td>
-                                    </tr> 
-                                    @endforeach
+                                    </tr>
+                                    @endforeach       
+
+
 
                             </tbody>
                         </table> 

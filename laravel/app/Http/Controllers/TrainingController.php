@@ -114,11 +114,11 @@ class TrainingController extends Controller
      * Display the specified resource.
      */
     public function show($id){
-        $events = Training::with('sets')->find($id);
-        // dd($events);
-      $events = Training::find($id);
+      $events = Training::with('sets')->find($id);
       $sets = $events->sets;
-     return view('trainings.show', compact('events','sets'));
+
+
+      return view('trainings.show', compact('events','sets'));
 
 
     }
