@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('part_id')->constrained('training_part');
             $table->string('name');
+            $table->date('Up')->comment('開始日');
+
             $table->timestamps();
         });
     }

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\training_part;
 use App\Models\My_menu_Post;
 use App\Http\Requests\CorpRequest;
+use Carbon\Carbon;
 
 class PostController extends Controller
 {
@@ -29,6 +30,7 @@ class PostController extends Controller
      */
     public function create()
     {        
+        // DBの値を取得してビューに渡す処理
         $parts = training_part::all();
             $chest = $parts->find(1);
             $back = $parts->find(2);
@@ -36,6 +38,7 @@ class PostController extends Controller
             $arms_shoulders = $parts->find(4);
             $other = $parts->find(5);
         $POST = My_menu_post::all();
+
         return view('trainings.Mymenu_post',compact('chest','back','legs','arms_shoulders','other', 'POST', ));
     }
 
@@ -57,6 +60,10 @@ class PostController extends Controller
                         $part_data = new My_menu_post;
                         $part_data->name =  $request->input('name');
                         $part_data->part_id = $request->input('part_id');
+                        $part_data->Up = now()->format('Y-m-d', $request->input('created_at') / 1000);
+                        $part_data->created_at = now()->format('Y-m-d', $request->input('timestamps') );
+                        $part_data->updated_at = now()->format('Y-m-d', $request->input('timestamps') );
+
                         $part_data->save();
                         // マイメニュー確認画面ができたらそのページに遷移する
                         return view('trainings.index');

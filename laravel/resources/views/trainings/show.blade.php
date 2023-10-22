@@ -63,31 +63,38 @@
                             </div>
                        </div>
 
-                        <table class="border w-full max-w-5xl border m-8
+                        <table class="w-full max-w-5xl m-8
                             placeholder:italic placeholder:text-slate-400 block bg-white  border border-slate-100 
-                            rounded-md py-4 pl-4 pr-4  shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 
+                            rounded-md py-4 pl-4 pr-4  shadow-sm 
                             sm:text-sm max-h-max  table-auto">
 
 
-                            <tbody class="max-w-7xl w-full h-full rounded-md border block shadow-sm 
-                            focus:outline-none focus:border-sky-500 sm:text-sm table-auto  focus:ring-1 border-slate-200" >
+                            <tbody class="max-w-7xl w-full h-full rounded-md block shadow-sm
+                            focus:outline-none sm:text-sm table-auto" >
                             
                                     <tr class="w-full block flex items-center rounded-md h-14
-                                     border-separate border border-slate-200 ">
-                                        <th scope="col" class="w-1/2 block ">重量(kg)</th>
-                                        <th scope="col" class="w-1/2 block ">回数(rep)</th>
+                                     border-separate border border-slate-300 ">
+                                        <th scope="col" class="w-1/3 block ">重量(kg)</th>
+                                        <th scope="col" class="w-1/3 block ">回数(rep)</th>
+                                        <th scope="col" class="w-1/3 block ">総重量(total)</th>
                                     </tr>
 
                                     @foreach($sets as $set)
                                     <!-- 1~3set.weight/rep -->
-                                    <tr class="h-20 block flex items-center  border-separate border border-slate-200">
-                                        <td class="px-6 py-4 w-1/2 flex ">
-                                            <p class="m-auto ">{{$set->set_id}}set:{{$set->weight}}kg</p>
+                                    <tr class="h-20 block flex items-center  border-separate border border-slate-00
+                                     text-center text-bold rounded-md">
+
+                                        <td class="px-6 py-4 w-1/2 flex">
+                                            <p class="">{{$set->set_id}}set:</p>
+                                           <p class="w-1/2 ml-4">{{$set->weight}}kg</p>
                                         </td> 
                                         <td class="px-6 py-4 w-1/2">
-                                            <p class="text-center">{{$set->rep}}回</p>
-                                            {{ $set->weight * $set->rep }}
-                                    </td>
+                                            <p class="">{{$set->rep}}回</p>
+                                        </td>
+                                        <td class="px-6 py-4 w-1/2">
+                                            <p class="">{{ $set->weight * $set->rep }}</p>
+                                        </td> 
+
                                     </tr>
                                     @endforeach       
 

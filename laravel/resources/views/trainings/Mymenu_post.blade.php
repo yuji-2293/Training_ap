@@ -39,15 +39,44 @@
         </header>
         <main class="grow m-10">
 
+        <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg 
+        shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700 ">
+            <h5 class="mb-3 text-base text-center font-semibold text-gray-900 md:text-xl dark:text-white">
+                {{$chest->name}}(Chest)
+            </h5>
+        <p class="text-sm font-normal text-gray-500 dark:text-gray-400">>何かを入れる</p>
 
-            <div>
-             {{$chest->name}}
-
+        <ul class="my-4 space-y-3 relative">
              @foreach($POST as $item )
              @if($item->part_id == 1)
-             {{$item->name}}
+            <li class="">
+                <span class="absolute right-0 inline-flex items-center justify-center text-xs font-medium text-gray-500 bg-gray-50 rounded-lg px-2 py-0.5 ml-3">
+                    {{$item->Up}}</span>
+                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 
+                rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 
+                dark:hover:bg-gray-500 dark:text-white">
+                    <span class="flex-1 ml-3 whitespace-nowrap text-lg">{{$item->name}}</span>
+                    <span class="  
+                     dark:bg-gray-700 dark:text-gray-400">
+                    </span>
+
+                </a>
+            </li>
              @endif
              @endforeach
+        </ul>
+        <div>
+            <a href="#" class="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400">
+                <svg class="w-3 h-3 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.529 7.988a2.502 2.502 0 0 1 5 .191A2.441 2.441 0 0 1 10 10.582V12m-.01 3.008H10M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                </svg>
+                Why do I need to connect with my wallet?</a>
+        </div>
+    </div>
+
+            <div>
+ 
+
             </div>
 
             <div>            
@@ -91,7 +120,17 @@
             </div>
         </main>
 
+                <!-- <form onsubmit="return deleteTask();"
+                    action="" method="post"class="inline-block ml-auto"
+                    role="menuitem" tabindex="-1">
+                    @csrf 
 
+                    <div class="bg-sky-100 flex mr-auto m">
+                    <button type="submit"class="w-20  text-sm md:hover:bg-slate-200 transition-colors">削除する</button>
+                    @method('DELETE')
+                    <button type="submit"class="w-20 text-sm md:hover:bg-slate-200 transition-colors">編集する</button>
+                    </div>
+                </form>-->
 
 
 
