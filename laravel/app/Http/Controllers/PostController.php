@@ -72,9 +72,14 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $show = My_menu_Post::find($id);
+        $parts = training_part::find($id);
+
+
+        return view('trainings.part_show',compact('show','parts'));
+
     }
 
     /**
