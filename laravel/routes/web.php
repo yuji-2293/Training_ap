@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
  Route::get('/Mymenu',[App\Http\Controllers\PostController::class,'Mymenu'])->name('trainings.Mymenu');
  Route::POST('/store',[App\Http\Controllers\PostController::class,'store'])->name('part_store');
  Route::get('/create_post',[App\Http\Controllers\PostController::class,'create'])->name('part_create');
+ Route::get('/show/{id}' ,[App\Http\Controllers\PostController::class, 'show'])->name('part_show');
+
 
 Route::resource('trainings', App\Http\Controllers\TrainingController::class);
 

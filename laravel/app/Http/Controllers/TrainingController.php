@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\JsonResponse;
 use App\Models\training_part;
-use App\Models\mymenu_post;
+use App\Models\my_menu_post;
 
 
 
@@ -116,8 +116,6 @@ class TrainingController extends Controller
     public function show($id){
       $events = Training::with('sets')->find($id);
       $sets = $events->sets;
-
-
       return view('trainings.show', compact('events','sets'));
 
 

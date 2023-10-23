@@ -15,8 +15,8 @@ class training_part extends Model
     protected $table = 'training_part';
 
 
-    public function My_menu_post()
+    public function My_menu_posts()
     {
-    return $this->hasMany(My_menu_Post::class,'part_id', 'id');
+    return $this->hasMany(My_menu_Post::class);
     }
 }
