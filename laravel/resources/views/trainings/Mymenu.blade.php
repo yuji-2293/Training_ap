@@ -63,21 +63,14 @@
                     <div class="w-full max-w-3xl  flex ">
                             <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full 
                             border border-slate-300 rounded-md focus:outline-none focus:border-sky-500 focus:ring-1
-                            py-4 pl-4 shadow-sm sm:text-sm mb-30  " placeholder="マイトレーニング" type="text" class="" name="name" id="name">
+                            py-4 pl-4 shadow-sm sm:text-sm mb-30  " placeholder="トレーニング名" value="{{old('name')}}" type="text" class="" name="name" id="name">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
                             <div class="sm:text-sm ml-1">
                                 <button type="submit"class="shadow-sm border border-slate-300 rounded-md py-4 w-20 md:hover:bg-sky-300 bg-sky-600 text-white  hover:bg-sky-300">登録する</button>
                             </div> 
                                         
-                    </div>
-                            <div class="">
-                                <a href="{{route('part_create') }}" type="button" class="shadow-sm border border-slate-300 block 
-                                rounded-md p-3 mt-20 md:hover:bg-sky-300 bg-sky-600
-                                hover:bg-sky-300 text-white ">>>登録したマイメニューを確認する</a>
-
-                            </div>
-
+                    </div>                           
                             @error('name')
                                 <div class="mt-3">
                                     <p class="text-red-500">
@@ -85,6 +78,14 @@
                                     </p>
                                 </div>
                             @enderror
+                            <div class="">
+                                <a href="{{route('part_create') }}" type="button" class="shadow-sm border border-slate-300 block 
+                                rounded-md p-3 mt-20 md:hover:bg-sky-300 bg-sky-600
+                                hover:bg-sky-300 text-white ">>>登録したマイメニューを確認する</a>
+
+                            </div>
+
+
                 </div>
             </form>
         </main>

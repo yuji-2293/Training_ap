@@ -48,10 +48,16 @@ class PostController extends Controller
     public function store(Request $request)
     {
 
-        $rules = ['name' => 'required|max:100',];                
+        $rules = [
+            'part_id' =>'required',
+            'name' => 'required|max:100'
+                  ];                
 
-            $messages = ['required' => '必要事項が入力されていません', 
-                        'max'=> '100文字以下にしてください',];
+            $messages = [
+                'part_id' => '登録する部位を選択してください',
+                'required' => '必要事項が[選択/入力]されていません', 
+                'max'=> '100文字以下にしてください',
+                    ];
                         $validator = Validator::make($request->all(), $rules, $messages);
 
                         if ($validator->fails()){
@@ -66,30 +72,26 @@ class PostController extends Controller
 
                         $part_data->save();
                         // マイメニュー確認画面ができたらそのページに遷移する
-                        return view('trainings.index');
-    }
+                        return redirect()->route('part_create');
+                    }
 
     /**
      * Display the specified resource.
      */
     public function show($id)
     {
-        $show = My_menu_Post::find($id);
-        $parts = training_part::find($id);
-
-
-        return view('trainings.part_show',compact('show','parts'));
-
+    //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(My_menu_Post $My_menu_post)
+    public function edit($id)
     {
-        // $parts = training_part::all();
-        // dd($My_menu_post);
-        // return view('trainings.Mymenu',compact('parts','My_menu_post'));
+        $show = My_menu_Post::find($id);
+        $parts = training_part::all();
+
+        return view('trainings.edit',compact('show','parts'));
     }
 
     /**
@@ -97,7 +99,21 @@ class PostController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $rules = ['name' => 'required|max:100',
+                  'part_id'=>'required'];                
+
+        $messages = ['required' => '必要事項が[選択/入力]されていません',
+                     'part_id' =>'登録する部位を選択してください', 
+                    'max'=> '100文字以下にしてください',];
+                    $validator = Validator::make($request->all(), $rules, $messages);
+                    if ($validator->fails()){
+                    return redirect()->route('part_edit',['id'=>$id])->withErrors($validator)->withInput();}
+
+        $update = My_menu_Post::find($id);
+        $update->name = $request->name;
+        $update->part_id = $request->part_id;
+        $update->save();
+        return redirect()->route('part_create');
     }
 
     /**
@@ -105,6 +121,8 @@ class PostController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $destroy = My_menu_Post::find($id);
+        $destroy->delete();
+        return redirect()->route('part_create');
     }
 }
