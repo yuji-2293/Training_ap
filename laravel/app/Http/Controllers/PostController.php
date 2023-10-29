@@ -38,6 +38,7 @@ class PostController extends Controller
             $arms_shoulders = $parts->find(4);
             $other = $parts->find(5);
         $POST = My_menu_post::all();
+        
 
         return view('trainings.Mymenu_post',compact('chest','back','legs','arms_shoulders','other', 'POST', ));
     }

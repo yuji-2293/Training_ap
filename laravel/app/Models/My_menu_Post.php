@@ -12,6 +12,11 @@ class My_menu_Post extends Model
     ];
     public $timestamps = false;
     protected $table = 'My_menu_posts';
+    protected $dates = [
+        'created_at' ,
+        'updated_at' ,
+        'Up' ,
+    ];
 
     public function training_part()
     {
