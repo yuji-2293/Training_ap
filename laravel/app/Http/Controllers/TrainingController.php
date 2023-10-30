@@ -25,7 +25,7 @@ class TrainingController extends Controller
 
     public function index(Request $request)
     {
-        return view ('trainings.index');
+        return view ('layouts.trainings.index');
      }
 
 
@@ -47,7 +47,7 @@ class TrainingController extends Controller
      */
     public function create(Request $request)
     {
-        return view('trainings.create');
+        return view('layouts.trainings.create');
     }
 
     /**
@@ -116,7 +116,7 @@ class TrainingController extends Controller
     public function show($id){
       $events = Training::with('sets')->find($id);
       $sets = $events->sets;
-      return view('trainings.show', compact('events','sets'));
+      return view('layouts.trainings.show', compact('events','sets'));
 
 
     }

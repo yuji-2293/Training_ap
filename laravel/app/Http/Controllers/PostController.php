@@ -22,7 +22,7 @@ class PostController extends Controller
     public function Mymenu(My_menu_Post $My_menu_post)
     {
        $parts = training_part::all();
-       return view('trainings.Mymenu',compact('parts','My_menu_post'));
+       return view('layouts.trainings.Mymenu',compact('parts','My_menu_post'));
    }
 
     /**
@@ -38,9 +38,9 @@ class PostController extends Controller
             $arms_shoulders = $parts->find(4);
             $other = $parts->find(5);
         $POST = My_menu_post::all();
-        
 
-        return view('trainings.Mymenu_post',compact('chest','back','legs','arms_shoulders','other', 'POST', ));
+
+        return view('layouts.trainings.Mymenu_post',compact('chest','back','legs','arms_shoulders','other', 'POST', ));
     }
 
     /**
@@ -92,7 +92,7 @@ class PostController extends Controller
         $show = My_menu_Post::find($id);
         $parts = training_part::all();
 
-        return view('trainings.edit',compact('show','parts'));
+        return view('layouts.trainings.edit',compact('show','parts'));
     }
 
     /**
