@@ -8,7 +8,7 @@
 <!-- calendarをブラウザに表示 -->
     <div id="app">
         <div class="m-auto w-50 m-7 p-7">
-            <div id='calendar' class="bg-white p-7"></div>
+            <div id='calendar' class="bg-white p-7 rounded-lg shadow"></div>
         </div>
     </div>
 </x-trainings.app> 
