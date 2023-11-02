@@ -106,7 +106,7 @@ class TrainingController extends Controller
             ];
             $save_sets = set::insert($sets);
 
-         return redirect('/');
+         return redirect('dashboard');
 
     }
 

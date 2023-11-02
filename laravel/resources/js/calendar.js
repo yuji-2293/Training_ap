@@ -34,13 +34,10 @@
 
 
 
-                    select: function (info) {
-                        document.location.href="/trainings/create";  //日付をクリックしたら/createに遷移
-                        alert("トレーニング内容の登録ページに遷移します");
-                    },
+
                     //DB連携=JSONページの読み込み//
                     events:'http://localhost:8000/Json/',
-                    // モーダル表示処理
+                    // 詳細ページ遷移
                     eventClick: function(jsEvent){
                         window.location.href = '/events/' + jsEvent.event.id;
                     },                 

@@ -4,7 +4,7 @@
                 <!--Chestcard  -->
                 <div class="w-full max-w-sm p-4 mr-3 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700 ">
                     <h5 class="mb-3 text-base text-center font-semibold text-gray-900 md:text-xl dark:text-white">
-                        {{$chest->name}}(Chest)
+                        {{$chest->name}}トレーニング(Chest)
                     </h5>
                     <p class="text-sm text-right font-normal text-gray-500 dark:text-gray-400">>トレーニングをクリックすると詳細を表示</p>
 
@@ -17,7 +17,7 @@
                         <a href="{{ route ('part_edit',['id'=>$item->id]) }}" class="flex items-center p-3 text-base font-bold text-gray-900 
                         rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 
                         dark:hover:bg-gray-500 dark:text-white">
-                            <span class="flex-1 ml-3 whitespace-nowrap text-lg">{{$item->name}}</span>
+                            <span class="flex-1 ml-3 whitespace-nowrap text-lg">{{$item->name}} </span>
                             <span class="  
                                 dark:bg-gray-700 dark:text-gray-400">
                             </span>
@@ -36,7 +36,7 @@
             <!--Backcard  -->
                 <div class="w-full max-w-sm p-4 mr-3 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700 ">
                     <h5 class="mb-3 text-base text-center font-semibold text-gray-900 md:text-xl dark:text-white">
-                        {{$back->name}}(back)
+                        {{$back->name}}トレーニング(back)
                     </h5>
                     <p class="text-sm text-right font-normal text-gray-500 dark:text-gray-400">>トレーニングをクリックすると詳細を表示</p>
 
@@ -68,7 +68,7 @@
             <!-- legscard -->
                 <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700 ">
                     <h5 class="mb-3 text-base text-center font-semibold text-gray-900 md:text-xl dark:text-white">
-                        {{$legs->name}}(legs)
+                        {{$legs->name}}トレーニング(legs)
                     </h5>
                     <p class="text-sm text-right font-normal text-gray-500 dark:text-gray-400">>トレーニングをクリックすると詳細を表示</p>
 
@@ -102,7 +102,7 @@
         <!-- arms_shoulderscard -->
         <div class="w-full max-w-sm p-4 mr-3 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700 ">
             <h5 class="mb-3 text-base text-center font-semibold text-gray-900 md:text-xl dark:text-white">
-                {{$arms_shoulders->name}}(arms_shoulders)
+                {{$arms_shoulders->name}}トレーニング(arms_shoulders)
             </h5>
             <p class="text-sm text-right font-normal text-gray-500 dark:text-gray-400">>トレーニングをクリックすると詳細を表示</p>
 
