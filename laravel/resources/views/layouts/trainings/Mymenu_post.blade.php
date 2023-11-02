@@ -1,5 +1,8 @@
-<x-trainings.app> 
-        <main class="grow m-10">
+<x-trainings.app>
+     <main class="grow m-10">
+                <div class="py-[25px]">
+                    <p class="text-2xl font-bold text-center">{{ Auth::user()->name }}さんのマイトレです</p>
+                </div>
         <div class="flex m-3 justify-center">
                 <!--Chestcard  -->
                 <div class="w-full max-w-sm p-4 mr-3 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700 ">
