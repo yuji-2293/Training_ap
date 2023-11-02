@@ -33,8 +33,16 @@
                     @endif
                     </div>
                 </div> 
-             </header>
 
+             </header>
+             <!-- 名前の表示分け -->
+                @if(Route::has('login'))
+                @auth
+                <div>ようこそ{{ Auth::user()->name }}さん</div>
+                @else
+                <div>ようこそゲストさん</div>
+                @endauth
+                @endif
              <main class="grid justify-items-center">
 
 
