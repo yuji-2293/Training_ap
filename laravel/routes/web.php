@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CalendarController;
 use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +52,14 @@ Route::post('/create', [App\Http\Controllers\TrainingController::class, 'store']
 Route::get('/create', [App\Http\Controllers\TrainingController::class, 'create'])->name('create');
 Route::get('/events/{id}' ,[App\Http\Controllers\TrainingController::class, 'show'])->name('events.show');
 Route::DELETE('/events/{id}' ,[App\Http\Controllers\TrainingController::class, 'destroy'])->name('trainings.delete');
+
+Route::post('/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store')
+->middleware(['no-redirect']);
+
+Route::post('/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store')
+->withoutMiddleware(['web','throttle','csrf']);
+// Route::post('/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store')
+// ->Middleware(['web','throttle','csrf']);
+
+Route::get('/calendar',[App\Http\Controllers\CalendarController::class, 'index'])->name('calendar.index');
+

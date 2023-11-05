@@ -104,9 +104,10 @@ class TrainingController extends Controller
             ["weight" => $request->input("third_weight"), "rep" => $request->input("third_rep"), 
             "set_id" => 3, "training_id" => $training_date["id"]]
             ];
+            
             $save_sets = set::insert($sets);
 
-         return redirect('dashboard');
+         return redirect('');
 
     }
 

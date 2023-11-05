@@ -25,6 +25,10 @@ class Kernel extends HttpKernel
         'cors' => \App\Http\Middleware\Cors::class, 
     ];
 
+    protected $routeMiddleware = [
+        'no-redirect' => \App\Http\Middleware\NoRedirectMiddleware::class,
+    ];
+
     /**
      * The application's route middleware groups.
      *
@@ -67,5 +71,8 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        
+        'no-redirect' => \App\Http\Middleware\NoRedirectMiddleware::class,
+
     ];
 }

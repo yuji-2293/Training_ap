@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>管理者ページ</title>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+ <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
 
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
@@ -17,7 +19,7 @@
                                 <a href="" class="text-white text-xl font-bold">筋トレ記録管理アプリ</a>
                             </div>    
                     <div class="py-4 w-full flex space-x-20 items-end items-center">
-                        <a href="{{('/')}}" class="font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 outline-none hover:outline-red-500 hover:rounded-sm">TOP</a>
+                        <a href="{{(route('trainings.index'))}}" class="font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 outline-none hover:outline-red-500 hover:rounded-sm">TOP</a>
                         <a href="{{ route('part_create') }}" class="font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 outline-none hover:outline-red-500 hover:rounded-sm">マイトレ</a>
                         <a href="{{ route('trainings.create') }}" class="font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 outline-none hover:outline-red-500 hover:rounded-sm">ワークアウトの記録</a>
                         <a href="{{ route('trainings.Mymenu') }}" class="font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 outline-none hover:outline-red-500 hover:rounded-sm">マイトレの登録</a>

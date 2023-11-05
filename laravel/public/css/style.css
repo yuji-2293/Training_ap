@@ -55,7 +55,7 @@ font-size: 2.75em;
 }
 /* eventアイコンの丸み/ */
 .fc-daygrid-event{
-    border-radius: 12px;
+    border-radius: 40px;
     box-shadow: 0 4px 6px -3px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* 影の太さ・色 */
 
 }
@@ -67,6 +67,7 @@ margin-top: 2px;
 .fc-daygrid-event{
 font-size: 1em;
 text-align: center;
-font-weight: bold;
+padding: 1px;
+
 
 }
