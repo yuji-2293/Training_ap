@@ -80,14 +80,48 @@
                     allDaySlot: true,   // 週や日表示で終日が表示される
                     timeZone: "asia/Tokyo",
                     //DB連携=JSONページの読み込み//
-                    events:'http://localhost:8000/calendar'
+                    events:'http://localhost:8000/calendar',
+                    //表示しているイベントの内容をtitleだけにする
+                    eventContent: function(arg){
+                      return {
+                      html:'<b>' + arg.event.title + '</b>'
+                      };
+                    },
                     // 詳細ページ遷移
-                    // eventClick: function(jsEvent){
-                    //     window.location.href = '/events/' + jsEvent.event.id;
+                    // eventClick: function(){
+                    //     window.location.href = '/create_post/';
                     // },                 
                     });
                     calendar.render();
                     
+                    const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
+                    let isDeleteMode = false;
+                    deleteModeCheckbox.addEventListener('change',function(){
+                    isDeleteMode = deleteModeCheckbox.checked;
+                    });
+
+                      calendar.on('eventClick', function(info) {
+                       if(isDeleteMode) {
+                         if(confirm('このイベントを本当に削除しますか？')) {
+                           var eventId = info.event.id;
+                            $.ajax({
+                            url: '/calendar/' + eventId,
+                            type:'GET',
+                            success: function(response) {
+                              info.event.remove();
+                              console.log(response.message);
+                            },
+                            error:function(error) {
+                            console.error(error);
+                            }  
+                          });
+                        }
+                      } else {
+                        window.location.href = '/create_post/';
+                      };
+                    });
+
+
                     // カテゴリー要素をドラック操作できる処理
                     new FullCalendar.Draggable(dashboardEl,{
                     itemSelector:'.category',
@@ -97,7 +131,6 @@
                     return {
                     title:category,
                     category:category,
-                    start: calendar.getDate(),
                     };
                     }
                     });

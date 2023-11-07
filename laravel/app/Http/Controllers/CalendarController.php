@@ -36,6 +36,14 @@ class CalendarController extends Controller
 
         return response()->json(['message' => 'イベントを保存しました']);
     }
+    public function destroy($id) {
+        $destroy = Part_event::find($id);
+        if(!$destroy) {
+         return response()->json(['message'=>'イベントが見つかりません'],404);
+        }
+        $destroy->delete();
+    return response()->json(['message' => 'イベントを削除しました']);
+    }
 
     
 }
