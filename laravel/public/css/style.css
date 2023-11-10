@@ -82,12 +82,7 @@ font-size: 2.75em;
   box-shadow: none;
   transform: translateY(5px);
 }
-/* .fc-event-title{
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
-text-align: center;
-} */
+
 .fc-event-same-day{
 margin-right:5px;
 }
