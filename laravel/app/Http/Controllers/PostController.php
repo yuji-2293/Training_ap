@@ -10,6 +10,8 @@ use App\Models\My_menu_Post;
 use App\Http\Requests\CorpRequest;
 use Carbon\Carbon;
 
+// ※PostControllerマイメニュー関連の機能を記述する //
+
 class PostController extends Controller
 {
     /**

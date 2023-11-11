@@ -15,6 +15,7 @@ use App\Models\my_menu_post;
 
 use App\Models\Training as ModelsTraining;
 
+// ※Topやワークアウト関連についてはTrainingControllerで記述する //
 
 class TrainingController extends Controller
 {
@@ -31,16 +32,44 @@ class TrainingController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function chest(Request $request)
     {
         $parts = training_part::all();
         $chest = $parts->find(1);
+        // $back = $parts->find(2);
+        // $legs = $parts->find(3);
+        // $arms_shoulders = $parts->find(4);
+        // $other = $parts->find(5);
+        $POST = My_menu_post::all();
+        return view('layouts.trainings.chest',compact('chest', 'POST', ));
+    }
+    public function back(Request $request)
+    {
+        $parts = training_part::all();
         $back = $parts->find(2);
+        $POST = My_menu_post::all();
+        return view('layouts.trainings.back',compact('back', 'POST', ));
+    }
+    public function legs(Request $request)
+    {
+        $parts = training_part::all();
         $legs = $parts->find(3);
+        $POST = My_menu_post::all();
+        return view('layouts.trainings.legs',compact('legs', 'POST', ));
+    }
+    public function arms_shoulders(Request $request)
+    {
+        $parts = training_part::all();
         $arms_shoulders = $parts->find(4);
+        $POST = My_menu_post::all();
+        return view('layouts.trainings.arms_shoulders',compact('arms_shoulders', 'POST', ));
+    }
+    public function other(Request $request)
+    {
+        $parts = training_part::all();
         $other = $parts->find(5);
         $POST = My_menu_post::all();
-        return view('layouts.trainings.create',compact('chest','back','legs','arms_shoulders','other', 'POST', ));
+        return view('layouts.trainings.other',compact('other', 'POST', ));
     }
 
     /**

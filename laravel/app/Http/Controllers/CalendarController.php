@@ -12,8 +12,11 @@ use App\Models\training_part;
 use App\Models\my_menu_post;
 use App\Models\Part_event;
 
+//Top画面のFullCalendar関連の記述
+
 class CalendarController extends Controller
 {
+    //DBに保存されたFullCalendarへのデータをjson形式で出力する処理
     public function index(Request $request, $id = -1){
 
             if($id == -1){
@@ -24,6 +27,7 @@ class CalendarController extends Controller
                 }
     
     }
+    //ドラッグ&ドロップでイベントをDBに保存する処理
     public function store(Request $request){
         $data = $request->all();
 
@@ -36,6 +40,7 @@ class CalendarController extends Controller
 
         return response()->json(['message' => 'イベントを保存しました']);
     }
+    //FullCalendarの削除機能の処理
     public function destroy($id) {
         $destroy = Part_event::find($id);
         if(!$destroy) {

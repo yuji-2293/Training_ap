@@ -34,7 +34,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-
+// PostControllerルート
  Route::get('/Mymenu',[App\Http\Controllers\PostController::class,'Mymenu'])->name('trainings.Mymenu');
  Route::POST('/store',[App\Http\Controllers\PostController::class,'store'])->name('part_store');
  Route::get('/create_post',[App\Http\Controllers\PostController::class,'create'])->name('part_create');
@@ -43,17 +43,20 @@ require __DIR__.'/auth.php';
  Route::delete('/edit/{id}' ,[App\Http\Controllers\PostController::class, 'destroy'])->name('part_destroy');
 
 
+//TrainingControllerルート
 Route::resource('trainings', App\Http\Controllers\TrainingController::class);
 Route::get('/index', [App\Http\Controllers\TrainingController::class,'index']);
-// Route::get('/Json', [App\Http\Controllers\TrainingController::class, 'Json'])
-// ->name('Json');
-// Route::get('/Json{id}', [App\Http\Controllers\TrainingController::class, 'Json'])->name('Json');
 
 Route::post('/create', [App\Http\Controllers\TrainingController::class, 'store'])->name('store');
-Route::get('/create', [App\Http\Controllers\TrainingController::class, 'create'])->name('create');
-// Route::get('/events/{id}' ,[App\Http\Controllers\TrainingController::class, 'show'])->name('events.show');
-// Route::DELETE('/events/{id}' ,[App\Http\Controllers\TrainingController::class, 'destroy'])->name('trainings.delete');
+Route::get('/my-menu/chest', [App\Http\Controllers\TrainingController::class, 'chest'])->name('back');
+Route::get('/my-menu/back', [App\Http\Controllers\TrainingController::class, 'back'])->name('legs');
+Route::get('/my-menu/legs', [App\Http\Controllers\TrainingController::class, 'legs'])->name('chest');
+Route::get('/my-menu/arms_shoulders', [App\Http\Controllers\TrainingController::class, 'arms_shoulders'])->name('arms_shoulders');
+Route::get('/my-menu/other', [App\Http\Controllers\TrainingController::class, 'other'])->name('other');
 
+
+
+//calendarControllerルート//
 Route::post('/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store')
 ->middleware(['no-redirect']);
 

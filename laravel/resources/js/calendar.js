@@ -87,10 +87,7 @@
                       html:'<b>' + arg.event.title + '</b>'
                       };
                     },
-                    // 詳細ページ遷移
-                    // eventClick: function(){
-                    //     window.location.href = '/create_post/';
-                    // },                 
+               
                     });
                     calendar.render();
                     
@@ -99,6 +96,13 @@
                     deleteModeCheckbox.addEventListener('change',function(){
                     isDeleteMode = deleteModeCheckbox.checked;
                     });
+                    const partUrls = {
+                    胸:'/my-menu/chest',
+                    背中:'/my-menu/back',
+                    足:'/my-menu/legs',
+                    腕or肩:'/my-menu/arms_shoulders',
+                    その他:'/my-menu/other',
+                    };
 
                       calendar.on('eventClick', function(info) {
                        if(isDeleteMode) {
@@ -117,11 +121,15 @@
                           });
                         }
                       } else {
-                        window.location.href = '/create_post/';
+                        const part = info.event.extendedProps.category;
+                        if (partUrls[part]) {
+                         window.location.href = partUrls[part];
+                        } else {
+                         console.error('部位に対するURLが未定義です。');
+                         console.error(info.event.extendedProps.category);
+                        }
                       };
                     });
-
-
                     // カテゴリー要素をドラック操作できる処理
                     new FullCalendar.Draggable(dashboardEl,{
                     itemSelector:'.category',

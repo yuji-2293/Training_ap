@@ -17,7 +17,7 @@ class training_partSeeder extends Seeder
             ['id' => 1,'name' =>'胸'],
             ['id'=> 2, 'name'=>'背中'],
             ['id'=>3,'name'=>'足'],
-            ['id'=>4,'name'=>'腕/肩'],
+            ['id'=>4,'name'=>'腕or肩'],
             ['id'=>5,'name'=>'その他(有酸素等)'],
         ];
         DB::table('training_part')->insert($params);
