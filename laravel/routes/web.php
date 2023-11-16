@@ -48,11 +48,12 @@ Route::resource('trainings', App\Http\Controllers\TrainingController::class);
 Route::get('/index', [App\Http\Controllers\TrainingController::class,'index']);
 
 Route::post('/create', [App\Http\Controllers\TrainingController::class, 'store'])->name('store');
-Route::get('/my-menu/chest', [App\Http\Controllers\TrainingController::class, 'chest'])->name('back');
-Route::get('/my-menu/back', [App\Http\Controllers\TrainingController::class, 'back'])->name('legs');
-Route::get('/my-menu/legs', [App\Http\Controllers\TrainingController::class, 'legs'])->name('chest');
+Route::get('/my-menu/chest', [App\Http\Controllers\TrainingController::class, 'chest'])->name('chest');
+Route::get('/my-menu/back', [App\Http\Controllers\TrainingController::class, 'back'])->name('back');
+Route::get('/my-menu/legs', [App\Http\Controllers\TrainingController::class, 'legs'])->name('legs');
 Route::get('/my-menu/arms_shoulders', [App\Http\Controllers\TrainingController::class, 'arms_shoulders'])->name('arms_shoulders');
 Route::get('/my-menu/other', [App\Http\Controllers\TrainingController::class, 'other'])->name('other');
+Route::get('/my-menu/all',[App\Http\Controllers\TrainingController::class, 'allTrainings'])->name('all');
 
 
 

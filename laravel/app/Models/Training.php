@@ -10,6 +10,7 @@ use App\Models\set;
 class Training extends Model
 {
     protected $table = 'trainings';
+    protected $fillable = ['title', 'part_id'];
 
 
     public function sets()

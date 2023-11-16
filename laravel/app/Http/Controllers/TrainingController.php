@@ -36,10 +36,6 @@ class TrainingController extends Controller
     {
         $parts = training_part::all();
         $chest = $parts->find(1);
-        // $back = $parts->find(2);
-        // $legs = $parts->find(3);
-        // $arms_shoulders = $parts->find(4);
-        // $other = $parts->find(5);
         $POST = My_menu_post::all();
         return view('layouts.trainings.chest',compact('chest', 'POST', ));
     }
@@ -72,44 +68,97 @@ class TrainingController extends Controller
         return view('layouts.trainings.other',compact('other', 'POST', ));
     }
 
+    public function allTrainings(){
+        $parts = training_part::all();
+        $chest = $parts->find(1);
+        $back = $parts->find(2);
+        $legs = $parts->find(3);
+        $arms_shoulders = $parts->find(4);
+        $other = $parts->find(5);
+        $POST = My_menu_post::all();
+
+
+
+        return view('layouts.trainings.all',compact('chest','back','legs','arms_shoulders','other'));
+    
+    }
+
     /**
      * Store a newly created resource in storage.
      */
+
     public function store(Request $request)
     {
-            //トレーニング名の登録
-        $training_date = new Training;
-        $training_date->title = $request->input('title');
-        $training_date->start = now()->format('Y-m-d', $request->input('start') / 1000);
-        $training_date->end = now()->format('Y-m-d', $request->input('end') / 1000);
-        $training_date->save();
-        // set内容の登録
-        $sets = [
-        
-            [
-                "weight" => $request->input("first_weight"), 
-                "rep" => $request->input("first_rep"), 
-                "set_id" => 1, 
-                "training_id" => $training_date["id"]
-            ],
-            [
-                "weight" => $request->input("second_weight"), 
-                "rep" => $request->input("second_rep"), 
-                "set_id" => 2, 
-                "training_id" => $training_date["id"]
-            ],
 
-            [
-                "weight" => $request->input("third_weight"),
-                "rep" => $request->input("third_rep"), 
-                "set_id" => 3, 
-                "training_id" => $training_date["id"]
-             ]
+        $rules = [
+            'title' =>'required'|'max:100',
+            'weight' =>'required'|'min:0',
+            'rep' => 'required'|'min:1'
+            ];                
+
+            $messages = [
+                'title' => '登録するトレーニングを入力してください',
+                'required' => '必要事項が[入力]されていません', 
+                'max'=> '100文字以下にしてください',
             ];
-            
-            $save_sets = set::insert($sets);
+            $validator = Validator::make($request->all(), $rules, $messages);
 
-           return redirect('/');
+        try{
+              $training = Training::create([
+        'title' => $request->input('title'),
+        'part_id' => $request->input('part_id'),
+        ]);
+        $sets =[];
+        $sets[] = [
+         'weight' => (int) $request->input("weight"),
+         'rep' => (int) $request->input("rep"),
+         'set_id' => $request->input('sets'),
+         'Training_id' => $training->id,
+         'part_id' => $training->part_id,
+         ];
+
+        Set::insert($sets);
+        
+        return redirect()->back()->with('success','データが登録されました！');
+        } catch (\Exception $e){
+          return redirect()->back()->with('error','データの登録に失敗しました。もう一度お試しください。');
+        }
+
+
+
+        //     //トレーニング名の登録
+        // $training_date = new Training;
+        // $training_date->title = $request->input('title');
+        // $training_date->start = now()->format('Y-m-d', $request->input('start') / 1000);
+        // $training_date->end = now()->format('Y-m-d', $request->input('end') / 1000);
+        // $training_date->save();
+        // // set内容の登録
+        // $sets = [
+        
+        //     [
+        //         "weight" => $request->input("first_weight"), 
+        //         "rep" => $request->input("first_rep"), 
+        //         "set_id" => 1, 
+        //         "training_id" => $training_date["id"]
+        //     ],
+        //     [
+        //         "weight" => $request->input("second_weight"), 
+        //         "rep" => $request->input("second_rep"), 
+        //         "set_id" => 2, 
+        //         "training_id" => $training_date["id"]
+        //     ],
+
+        //     [
+        //         "weight" => $request->input("third_weight"),
+        //         "rep" => $request->input("third_rep"), 
+        //         "set_id" => 3, 
+        //         "training_id" => $training_date["id"]
+        //      ]
+        //     ];
+            
+        //     $save_sets = set::insert($sets);
+
+        //    return redirect('/');
 }
 
 

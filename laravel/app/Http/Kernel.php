@@ -21,12 +21,16 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
+        \App\Http\Middleware\NoCacheMiddleware::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         'cors' => \App\Http\Middleware\Cors::class, 
+
     ];
 
     protected $routeMiddleware = [
         'no-redirect' => \App\Http\Middleware\NoRedirectMiddleware::class,
+        'noCache' =>      \App\Http\Middleware\NoCacheMiddleware::class,
+
     ];
 
     /**
@@ -73,6 +77,8 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         
         'no-redirect' => \App\Http\Middleware\NoRedirectMiddleware::class,
+        'nocache'=> \App\Http\Middleware\NoCacheMiddleware::class,
+
 
     ];
 }

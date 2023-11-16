@@ -11,14 +11,13 @@
           height:'auto',
                     firstDay:1,
                     headerToolbar: {
-                        left: "dayGridMonth listMonth",
+                        left: "",
                         center: "title",
                         right: "prev,next today",
                     },
                     buttonText:{
                     ToDay:'今月',
-                    month:'月',
-                    list:'リスト'
+                    month:'今月',
                     },
                     locale:'ja',
                     noEventsContent: 'スケジュールはありません',
