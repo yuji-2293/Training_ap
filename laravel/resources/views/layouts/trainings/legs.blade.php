@@ -37,7 +37,7 @@
                 <ul class="my-4 space-y-3">
                 <li class="">
                     <x-form class="">
-                    <input class="rounded-md h-10 border-separate border border-slate-300 shadow" type="text" name="title" value="{{$item->name}}">
+                    <input class="focus:border-rose-500 focus:ring-rose-500 hover:border-gray-500 rounded-md h-10 border-separate border border-slate-300 shadow" type="text" name="title" value="{{$item->name}}">
                     <input type="hidden" name="part_id" value="{{$item->part_id}}">
 
                     </x-form>

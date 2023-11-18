@@ -22,7 +22,7 @@
                         <a href="{{(route('trainings.index'))}}" class="font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 outline-none hover:outline-red-500 hover:rounded-sm">TOP</a>
                         <a href="{{ route('part_create') }}" class="font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 outline-none hover:outline-red-500 hover:rounded-sm">マイトレ一覧</a>
                         <a href="{{ route('trainings.Mymenu') }}" class="font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 outline-none hover:outline-red-500 hover:rounded-sm">マイトレの登録</a>
-                        <a href="{{ route('all') }}" class="font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 outline-none hover:outline-red-500 hover:rounded-sm">ワークアウトの記録</a>
+                        <a href="{{ route('workouts') }}" class="font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 outline-none hover:outline-red-500 hover:rounded-sm">ワークアウトの共有</a>
 
                         <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover-2"  data-dropdown-trigger="hover" data-dropdown-delay="1000"
                         class="font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white flex items-center

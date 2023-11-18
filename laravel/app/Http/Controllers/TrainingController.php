@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\JsonResponse;
 use App\Models\training_part;
 use App\Models\my_menu_post;
+use App\Models\User;
 
 
 
@@ -37,7 +38,7 @@ class TrainingController extends Controller
         $parts = training_part::all();
         $chest = $parts->find(1);
         $POST = My_menu_post::all();
-        return view('layouts.trainings.chest',compact('chest', 'POST', ));
+        return view('layouts.trainings.chest',compact('chest', 'POST'));
     }
     public function back(Request $request)
     {
@@ -68,26 +69,18 @@ class TrainingController extends Controller
         return view('layouts.trainings.other',compact('other', 'POST', ));
     }
 
-    public function allTrainings(){
-        $parts = training_part::all();
-        $chest = $parts->find(1);
-        $back = $parts->find(2);
-        $legs = $parts->find(3);
-        $arms_shoulders = $parts->find(4);
-        $other = $parts->find(5);
-        $POST = My_menu_post::all();
-
-
-
-        return view('layouts.trainings.all',compact('chest','back','legs','arms_shoulders','other'));
+    public function showOtherWorkouts(User $user){
     
+        $other_user_trainings = Training::whereNotnull('other_user_id')->paginate(3);
+        return view('layouts.trainings.workouts_show', ['other_user_trainings' => $other_user_trainings]);
+
     }
 
     /**
      * Store a newly created resource in storage.
      */
 
-    public function store(Request $request)
+    public function store(Request $request,User $user)
     {
 
         $rules = [
@@ -104,9 +97,12 @@ class TrainingController extends Controller
             $validator = Validator::make($request->all(), $rules, $messages);
 
         try{
+
               $training = Training::create([
         'title' => $request->input('title'),
         'part_id' => $request->input('part_id'),
+        'set_id' =>$request->input('sets'),
+        'other_user_id' => $request->input('other_user_id'),
         ]);
         $sets =[];
         $sets[] = [
@@ -115,6 +111,8 @@ class TrainingController extends Controller
          'set_id' => $request->input('sets'),
          'Training_id' => $training->id,
          'part_id' => $training->part_id,
+         'other_user_id' => $request->other_user_id,
+
          ];
 
         Set::insert($sets);
@@ -123,42 +121,6 @@ class TrainingController extends Controller
         } catch (\Exception $e){
           return redirect()->back()->with('error','データの登録に失敗しました。もう一度お試しください。');
         }
-
-
-
-        //     //トレーニング名の登録
-        // $training_date = new Training;
-        // $training_date->title = $request->input('title');
-        // $training_date->start = now()->format('Y-m-d', $request->input('start') / 1000);
-        // $training_date->end = now()->format('Y-m-d', $request->input('end') / 1000);
-        // $training_date->save();
-        // // set内容の登録
-        // $sets = [
-        
-        //     [
-        //         "weight" => $request->input("first_weight"), 
-        //         "rep" => $request->input("first_rep"), 
-        //         "set_id" => 1, 
-        //         "training_id" => $training_date["id"]
-        //     ],
-        //     [
-        //         "weight" => $request->input("second_weight"), 
-        //         "rep" => $request->input("second_rep"), 
-        //         "set_id" => 2, 
-        //         "training_id" => $training_date["id"]
-        //     ],
-
-        //     [
-        //         "weight" => $request->input("third_weight"),
-        //         "rep" => $request->input("third_rep"), 
-        //         "set_id" => 3, 
-        //         "training_id" => $training_date["id"]
-        //      ]
-        //     ];
-            
-        //     $save_sets = set::insert($sets);
-
-        //    return redirect('/');
 }
 
 
@@ -168,11 +130,7 @@ class TrainingController extends Controller
      * Display the specified resource.
      */
     public function show($id){
-      $events = Training::with('sets')->find($id);
-      $sets = $events->sets;
-      return view('layouts.trainings.show', compact('events','sets'));
-
-
+  
     }
 
     /**

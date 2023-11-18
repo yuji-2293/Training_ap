@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CalendarController;
+use App\Models\OtherUserWorkout;
 use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
@@ -60,7 +61,6 @@ Route::get('/my-menu/all',[App\Http\Controllers\TrainingController::class, 'allT
 //calendarControllerルート//
 Route::post('/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store')
 ->middleware(['no-redirect']);
-
 Route::post('/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store')
 ->withoutMiddleware(['web','throttle','csrf']);
 
@@ -68,4 +68,5 @@ Route::post('/event',[App\Http\Controllers\CalendarController::class, 'store'])-
 Route::get('/calendar',[App\Http\Controllers\CalendarController::class, 'index'])->name('calendar.index');
 Route::get('/calendar/{id}' ,[App\Http\Controllers\CalendarController::class, 'destroy'])->name('calendar.delete');
 
+Route::get('workouts',[App\Http\Controllers\TrainingController::class,'showOtherWorkouts'])->name('workouts');
 
