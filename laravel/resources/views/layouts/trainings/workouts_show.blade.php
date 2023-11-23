@@ -18,47 +18,74 @@
                      <span class="absolute bottom-4 right-0 mt-4 bg-rose-500 text-white text-xs  font-medium  px-2.5 rounded dark:bg-blue-900 dark:text-white ms-3">{{$training->created_at->format('Y年m月d日') }}</span>
                     </h2>
                 </div>
-            <div class="flex p-2 items-baseline ">
+                <div class="flex p-2 items-baseline ">
                         <!-- トレーニング名 -->
                         <div class="header mx-auto flex flex-col items-center">
                             <label class="text-gray-600 my-1.5">トレーニング名</label>
                             <p class="text-2xl font-bold text-gray-800">{{ $training->title }}</p>
                         </div> 
                        <div class="body ml-auto">
-                        @foreach($training->sets as $set)
-                        <div class="grid grid-cols-3 gap-4">
-                            <!-- 重量 -->
-                            <div class="flex flex-col items-center">
-                                <label class="text-gray-600 my-1.5">重量</label>
-                                <p class="text-lg font-semibold text-gray-800">{{ $set->weight }} kg</p>
-                            </div>
+                         @foreach($training->sets as $set)
+                         <div class="grid grid-cols-3 gap-4">
+                                <!-- 重量 -->
+                                <div class="flex flex-col items-center">
+                                    <label class="text-gray-600 my-1.5">重量</label>
+                                    <p class="text-lg font-semibold text-gray-800">{{ $set->weight }} kg</p>
+                                </div>
 
-                            <!-- 回数 -->
-                            <div class="flex flex-col items-center">
-                                <label class="text-gray-600 my-1.5">回数</label>
-                                <p class="text-lg font-semibold text-gray-800">{{ $set->rep }} 回</p>
-                            </div>
+                                <!-- 回数 -->
+                                <div class="flex flex-col items-center">
+                                    <label class="text-gray-600 my-1.5">回数</label>
+                                    <p class="text-lg font-semibold text-gray-800">{{ $set->rep }} 回</p>
+                                </div>
 
-                            <!-- セット数 -->
-                            <div class="flex flex-col items-center">
-                                <label class="text-gray-600 my-1.5">セット数</label>
-                                <p class="text-lg font-semibold text-gray-800">{{ $set->set_id }} セット目</p>
-                            </div>
-                        </div> 
+                                <!-- セット数 -->
+                                <div class="flex flex-col items-center">
+                                    <label class="text-gray-600 my-1.5">セット数</label>
+                                    <p class="text-lg font-semibold text-gray-800">{{ $set->set_id }} セット目</p>
+                                </div>
+                         </div> 
 
-                        @endforeach
-                </div>
-            </div>
-     </li>
+                         @endforeach
+                        </div>
+                  </div>
+             <button class="like-button" data-training-id="{{ $training->id }}">いいね</button>
+             <span class="like-count" data-training-id="{{ $training->id }}">{{ $training->likes->count() }} いいね</span>
+</li>
         @else
         @break
         @endif
         @endforeach
 </ol>
+
 <div class="max-w-sm mx-auto">
     {{$other_user_trainings->links()}}
 </div>
 </main>
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        // いいねがクリックされた時
+        document.querySelectorAll('.like-button').forEach(function(button){
+            button.addEventListener('click',function(){
+            const trainingId = this.getAttribute('data-training-id');
+            fetch('/api/trainings/${trainigId}/like',{
+                method: 'POST',
+                headers: {
+                    'Content-type':'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                },
+            })
+            .then(response => response.json()).then(data => {
+            // 成功したらいいね数を更新
+                const likeCountElement = document.querySelector('.like-count[data-training-id="${trainingId}"]');
+            likeCountElement.innerText = data.likes_count;
+            })
+            .catch(error => console.error('Error:',error));
+            });
+        });
+    
+    });
+</script>
 
 
 </x-trainings.app>

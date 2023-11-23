@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('trainings', function (Blueprint $table) {
-            $table->foreignId('set_id')->nullable()->constrained('sets')->onDelete('cascade');
-
+        Schema::create('likes', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('training_id');
+            $table->timestamps();
+            $table->unique(['user_id','training_id']);
         });
     }
 
@@ -22,8 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('trainings', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('likes');
     }
 };

@@ -63,6 +63,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Set::class, 'other_user_id');
     }
+    public function likes()
+    {
+        return $this->hasMany(Likes::class);
+    }
 
 
 }

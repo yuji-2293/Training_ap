@@ -70,3 +70,4 @@ Route::get('/calendar/{id}' ,[App\Http\Controllers\CalendarController::class, 'd
 
 Route::get('workouts',[App\Http\Controllers\TrainingController::class,'showOtherWorkouts'])->name('workouts');
 
+Route::post('api/trainings/{trainingId}/like',[App\Http\Controllers\LikeController::class,'toggleLike']);
