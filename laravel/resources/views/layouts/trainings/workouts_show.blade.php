@@ -46,11 +46,12 @@
                                 </div>
                          </div> 
 
-                         @endforeach
                         </div>
                   </div>
              <button class="like-button" data-training-id="{{ $training->id }}">いいね</button>
-             <span class="like-count" data-training-id="{{ $training->id }}">{{ $training->likes->count() }} いいね</span>
+             <span class="like-count" data-training-id="{{ $training->id }}" >{{ $training->likes->count() }} いいね</span>
+            @endforeach
+
 </li>
         @else
         @break
@@ -60,31 +61,52 @@
 
 <div class="max-w-sm mx-auto">
     {{$other_user_trainings->links()}}
-</div>
+</div>   
+
 </main>
 <script>
-    document.addEventListener('DOMContentLoaded',function(){
+        
         // いいねがクリックされた時
-        document.querySelectorAll('.like-button').forEach(function(button){
-            button.addEventListener('click',function(){
-            const trainingId = this.getAttribute('data-training-id');
-            fetch('/api/trainings/${trainigId}/like',{
-                method: 'POST',
-                headers: {
-                    'Content-type':'application/json',
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+        $(document).ready(function(){
+            $('.like-button').click(function(){
+            const  $button = $(this);
+            const trainingId = $button.data('training-id');
+            console.log(trainingId);
+            console.log($button);
+            var csrfToken = 
+                      document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+            $.ajax({
+                type: 'POST',
+                url:  `/trainings/{trainingId}/like`,
+                data: {
+                    training_id: trainingId,
+                    
                 },
-            })
-            .then(response => response.json()).then(data => {
+                headers: {
+                        'X-CSRF-TOKEN' : csrfToken
+                      },
+                success: function(data) {
             // 成功したらいいね数を更新
-                const likeCountElement = document.querySelector('.like-count[data-training-id="${trainingId}"]');
-            likeCountElement.innerText = data.likes_count;
-            })
-            .catch(error => console.error('Error:',error));
+                const likeCountElement = $(`.like-count[data-training-id="${trainingId}"]`);
+                 likeCountElement.text(`${data.likeCount} いいね`);
+                const isLiked = data.isLiked;
+
+                if (isLiked) {
+                    $button.text('いいね解除');
+                    likeCountElement.text(`${data.likeCount} いいね`);
+                } else {
+                    $button.text('いいね');
+                    likeCountElement.text(`${data.likeCount} いいね`);
+                }
+               },
+            error: function(error) {
+            console.error('通信失敗');
+            }
             });
-        });
-    
-    });
+            });
+            });
+
+
 </script>
 
 

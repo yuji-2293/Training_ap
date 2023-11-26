@@ -11,10 +11,8 @@ use Illuminate\Http\JsonResponse;
 use App\Models\training_part;
 use App\Models\my_menu_post;
 use App\Models\User;
-
-
-
 use App\Models\Training as ModelsTraining;
+use Illuminate\Support\Facades\Auth;
 
 // ※Topやワークアウト関連についてはTrainingControllerで記述する //
 
@@ -72,6 +70,7 @@ class TrainingController extends Controller
     public function showOtherWorkouts(User $user){
     
         $other_user_trainings = Training::whereNotnull('other_user_id')->paginate(3);
+        
         return view('layouts.trainings.workouts_show', ['other_user_trainings' => $other_user_trainings]);
 
     }

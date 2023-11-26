@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\set;
 use App\Models\User;
-
+use App\Models\Like;
 
 class Training extends Model
 {
