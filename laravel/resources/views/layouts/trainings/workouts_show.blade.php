@@ -48,8 +48,18 @@
 
                         </div>
                   </div>
-             <button class="like-button" data-training-id="{{ $training->id }}">いいね</button>
-             <span class="like-count" data-training-id="{{ $training->id }}" >{{ $training->likes->count() }} いいね</span>
+                <div class="like-container bg-red">
+                    <button class="like-button" id="like-button-{{ $training->id }}" data-training-id="{{ $training->id }}">
+                            <span class="like-status" data-training-id="{{ $training->id }}">
+                                    @if($training->likes->where('user_id',Auth::id())->first())
+                                    いいね済み
+                                    @else
+                                    いいね!!
+                                    @endif
+                            </span>
+                    </button>
+                    <span class="like-count" id="like-count-{{ $training->id }}" data-training-id="{{ $training->id }}" >いいね数×{{ $training->likes->count() }}</span>
+                </div>
             @endforeach
 
 </li>
@@ -68,6 +78,15 @@
         
         // いいねがクリックされた時
         $(document).ready(function(){
+            $.ajaxSetup({
+            header:{'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            statusCode: {
+                302: function(){
+                console.log('Redirect occurred');
+                }
+            }
+            })
             $('.like-button').click(function(){
             const  $button = $(this);
             const trainingId = $button.data('training-id');
@@ -80,28 +99,38 @@
                 url:  `/trainings/{trainingId}/like`,
                 data: {
                     training_id: trainingId,
-                    
                 },
                 headers: {
                         'X-CSRF-TOKEN' : csrfToken
                       },
+                      xhrFields: {
+                      withCredentials: true
+                    },
                 success: function(data) {
-            // 成功したらいいね数を更新
-                const likeCountElement = $(`.like-count[data-training-id="${trainingId}"]`);
-                 likeCountElement.text(`${data.likeCount} いいね`);
-                const isLiked = data.isLiked;
+            // 成功したらいいね数とボタンのテキストを更新
+                const $CountElement = $button.siblings('.like-count');
+                const $StatusElement = $button.find('.like-status');
+                // いいね状態が変わった場合はいいね数も更新
+                if(data.isLiked !==undefined) {
+                const newText = data.isLiked ? 'いいね済み': 'いいね解除';
+                $StatusElement.text(newText);
+                $CountElement.text(`${data.likeCount} いいね`);
+                console.log(data);
+                location.reload();
 
-                if (isLiked) {
-                    $button.text('いいね解除');
-                    likeCountElement.text(`${data.likeCount} いいね`);
-                } else {
-                    $button.text('いいね');
-                    likeCountElement.text(`${data.likeCount} いいね`);
                 }
                },
-            error: function(error) {
-            console.error('通信失敗');
+            error: function(xhr,status,error) {
+            console.error('通信失敗',xhr,status,error);
+            },
+            complete: function(xhr,status) {
+                if (status === 'error' && xhr.status === 302) {
+                window.location.href = xhr.getResponseHeader('Location');
+                }
+                console.log('Ajax request completed:',xhr,status);
+
             }
+
             });
             });
             });
