@@ -48,20 +48,19 @@
 
                         </div>
                   </div>
-                <div class="like-container bg-red-300">
-                    <div class="">
-                            <button class="like-button" id="like-button-{{ $training->id }}" data-training-id="{{ $training->id }}">
-                            <span class="like-status" data-training-id="{{ $training->id }}">
-                                    @if($training->likes->where('user_id',Auth::id())->first())
-                                    いいね済み
-                                    @else
-                                    いいね!!
-                                    @endif
-                            </span>
-                    </button>
-                    </div>
+                <div class="like-container text-right my-2">
+        
+                 <button class="like-button" id="like-button-{{ $training->id }}" data-training-id="{{ $training->id }}">
+                        <span class="like-status" data-training-id="{{ $training->id }}">
+                                @if($training->likes->where('user_id',Auth::id())->first())
+                                いいね済み
+                                @else
+                                いいね!!
+                                @endif
+                        </span>
+                 </button>
+                 <span class="like-count" id="like-count-{{ $training->id }}" data-training-id="{{ $training->id }}" >いいね数×{{ $training->likes->count() }}</span>
 
-                    <span class="like-count" id="like-count-{{ $training->id }}" data-training-id="{{ $training->id }}" >いいね数×{{ $training->likes->count() }}</span>
                 </div>
             @endforeach
 
