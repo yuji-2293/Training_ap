@@ -50,6 +50,9 @@ font-size: 2.75em;
 .fc-direction-ltr .fc-daygrid-event.fc-event-end, .fc-direction-rtl .fc-daygrid-event.fc-event-start{
     margin:0 auto;
     margin-bottom: 8px;
+    display: flex;
+
+    
 }
 
 
@@ -59,8 +62,8 @@ font-size: 2.75em;
     text-decoration: none;
     transition: all 0.2s;
     background-color: rgb(230, 63, 94); 
-    width:60px;
-    height:60px;
+    width: 70px;
+    height:70px;
     border-radius:50%;
     text-align: center;
     vertical-align: middle;
@@ -72,13 +75,10 @@ font-size: 2.75em;
     align-items: center; 
     justify-content: center;
     text-align: center;
+    
+
  } 
- .fc-daygrid-event{
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    text-align: center;
-}
+
 .fc-daygrid-event:active {
   box-shadow: none;
   transform: translateY(5px);
@@ -96,7 +96,16 @@ margin: 0 auto;
 margin-top: 2px;
 
 }
+
 .fc .fc-daygrid-body-natural .fc-daygrid-day-events{
-display: flex;
-justify-content: space-around;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    }
+.fc-popover-body{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
 }
