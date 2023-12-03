@@ -48,43 +48,5 @@ class LikeController extends Controller
         return response()->json(['error' => 'An error occurred', 500]);
     }
 }
-    // public function toggleLike(Training $training, Request $request)
-    // {     
-
-
-
-
-    //     $user = Auth::user();
-
-   
-    //     // トレーニングに対してすでにいいねが存在するかどうか確認
-    //     try{
-    //         return DB::transaction(function () use($training,$request) {$user = auth()->user();
-    //                     if ($training->likes()->where('user_id',$user->id)->exists()) {
-    //         $training->likes()->where('user_id',$user->id)->delete();
-    //         $likeCount = $training->likes()->count();
-    //         return response()->json(['isLiked' => false, 'likeCount' => $likeCount]);
-    //         }
-    //         // いいねが存在していない場合は新規作成する
-    //         $like = new Like();
-    //         $like->user_id = $user->id;
-    //         $like->training_id = $request->input('training_id');
-    //         $like->save();
-    //         $isLiked = true;
-        
-    //     // いいねの数を取得
-    //     $likeCount = $training->likes()->count();
-
-    //     return response()->json(['isLiked' => $isLiked, 'likeCount' => $likeCount , 'like' => $like]);
-    //     });
-
-    //     } catch (\Exception $e) {
-    //         Log::error('Toggle Like error: ' .$e->getMessage(),['user_id' => $user->id, 'training_id' => $request->input('training_id')]);
-    //         return response()->json(['error' => 'An error occurred',500]);
-    //     }
-
-
- 
-
-    // }
+    
 }

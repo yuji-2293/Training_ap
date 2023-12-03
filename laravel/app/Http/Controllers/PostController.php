@@ -74,7 +74,7 @@ class PostController extends Controller
                         $part_data->updated_at = now()->format('Y-m-d', $request->input('timestamps') );
 
                         $part_data->save();
-                        // マイメニュー確認画面ができたらそのページに遷移する
+                        
                         return redirect()->route('part_create');
                     }
 
