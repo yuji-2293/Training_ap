@@ -122,13 +122,7 @@
         </button>
     </div>
 </main>
-<footer class="bg-slate-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="py-4 text-center">
-                <p class="text-white text-sm">筋トレ記録管理アプリ</p>
-            </div>
-        </div>
-    </footer>
+
 </body>
 
 </html>
