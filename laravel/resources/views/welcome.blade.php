@@ -14,7 +14,7 @@
          <header class="bg-sky-600 flex justify-around">
                 <div class="text-white text-white text-xl font-bold max-w-7xl mx-auto px-4 sm:px-6 ">
                             <div class="py-4 text-center">
-                                <p href="" class="text-white text-xl font-bold">トレログ（試験）</p>
+                                <p href="" class="text-white text-xl font-bold">トレログ</p>
                             </div>    
                     <div class="py-4 flex space-x-36">
                         <a href="{{('/')}}" class="text-xl font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">TOP</a>

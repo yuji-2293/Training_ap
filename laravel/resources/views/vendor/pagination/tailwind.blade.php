@@ -42,7 +42,7 @@
             </a>
         @else
             <span class="disabled" aria-disabled="true" aria-label="{{ __('pagination.next') }}">
-                <span class="text-gray-500">&rsaquo;</span>
+                <span class="text-gray-500">前へ</span>
             </span>
         @endif
     </nav>
