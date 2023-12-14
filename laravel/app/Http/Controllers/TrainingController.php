@@ -35,35 +35,35 @@ class TrainingController extends Controller
     {
         $parts = training_part::all();
         $chest = $parts->find(1);
-        $POST = My_menu_post::all();
+        $POST = my_menu_Post::all();
         return view('layouts.trainings.chest',compact('chest', 'POST'));
     }
     public function back(Request $request)
     {
         $parts = training_part::all();
         $back = $parts->find(2);
-        $POST = My_menu_post::all();
+        $POST = my_menu_Post::all();
         return view('layouts.trainings.back',compact('back', 'POST', ));
     }
     public function legs(Request $request)
     {
         $parts = training_part::all();
         $legs = $parts->find(3);
-        $POST = My_menu_post::all();
+        $POST = my_menu_Post::all();
         return view('layouts.trainings.legs',compact('legs', 'POST', ));
     }
     public function arms_shoulders(Request $request)
     {
         $parts = training_part::all();
         $arms_shoulders = $parts->find(4);
-        $POST = My_menu_post::all();
+        $POST = my_menu_Post::all();
         return view('layouts.trainings.arms_shoulders',compact('arms_shoulders', 'POST', ));
     }
     public function other(Request $request)
     {
         $parts = training_part::all();
         $other = $parts->find(5);
-        $POST = My_menu_post::all();
+        $POST = my_menu_Post::all();
         return view('layouts.trainings.other',compact('other', 'POST', ));
     }
 
