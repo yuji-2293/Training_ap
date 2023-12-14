@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\JsonResponse;
 use App\Models\training_part;
-use App\Models\my_menu_post;
+use App\Models\My_menu_Post;
 use App\Models\User;
 use App\Models\Training as ModelsTraining;
 use Illuminate\Support\Facades\Auth;
@@ -35,35 +35,35 @@ class TrainingController extends Controller
     {
         $parts = training_part::all();
         $chest = $parts->find(1);
-        $POST = my_menu_Post::all();
+        $POST = My_menu_Post::all();
         return view('layouts.trainings.chest',compact('chest', 'POST'));
     }
     public function back(Request $request)
     {
         $parts = training_part::all();
         $back = $parts->find(2);
-        $POST = my_menu_Post::all();
+        $POST = My_menu_Post::all();
         return view('layouts.trainings.back',compact('back', 'POST', ));
     }
     public function legs(Request $request)
     {
         $parts = training_part::all();
         $legs = $parts->find(3);
-        $POST = my_menu_Post::all();
+        $POST = My_menu_Post::all();
         return view('layouts.trainings.legs',compact('legs', 'POST', ));
     }
     public function arms_shoulders(Request $request)
     {
         $parts = training_part::all();
         $arms_shoulders = $parts->find(4);
-        $POST = my_menu_Post::all();
+        $POST = My_menu_Post::all();
         return view('layouts.trainings.arms_shoulders',compact('arms_shoulders', 'POST', ));
     }
     public function other(Request $request)
     {
         $parts = training_part::all();
         $other = $parts->find(5);
-        $POST = my_menu_Post::all();
+        $POST = My_menu_Post::all();
         return view('layouts.trainings.other',compact('other', 'POST', ));
     }
 
