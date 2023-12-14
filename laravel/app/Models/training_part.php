@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\My_menu_post;
+use App\Models\My_menu_Post;
 
 class training_part extends Model
 {
@@ -20,7 +20,7 @@ class training_part extends Model
     ];
 
 
-    public function My_menu_posts()
+    public function My_menu_Posts()
     {
     return $this->hasMany(My_menu_Post::class);
     }

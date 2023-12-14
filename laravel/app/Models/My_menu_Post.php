@@ -11,7 +11,7 @@ class My_menu_Post extends Model
         'part_id',
     ];
     public $timestamps = false;
-    protected $table = 'My_menu_posts';
+    protected $table = 'My_menu_Posts';
     protected $dates = [
         'created_at' ,
         'updated_at' ,
