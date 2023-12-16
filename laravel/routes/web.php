@@ -62,8 +62,8 @@ Route::get('/my-menu/all',[App\Http\Controllers\TrainingController::class, 'allT
 //calendarControllerルート//
 Route::post('/public/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store');
 
-Route::get('/public/calendar',[App\Http\Controllers\CalendarController::class, 'index'])->name('calendar.index');
-Route::get('/public/calendar/{id}' ,[App\Http\Controllers\CalendarController::class, 'destroy'])->name('calendar.delete');
+Route::get('/calendar',[App\Http\Controllers\CalendarController::class, 'index'])->name('calendar.index');
+Route::get('/calendar/{id}' ,[App\Http\Controllers\CalendarController::class, 'destroy'])->name('calendar.delete');
 
 Route::get('workouts',[App\Http\Controllers\TrainingController::class,'showOtherWorkouts'])->name('workouts');
 
