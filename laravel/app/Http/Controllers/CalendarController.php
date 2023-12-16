@@ -35,6 +35,7 @@ class CalendarController extends Controller
         $event->title = $data['title'];
         $event->start = $data['start'];
         $event->category = $data ['category'];
+        dd($event);
 
         $event->save();
 
