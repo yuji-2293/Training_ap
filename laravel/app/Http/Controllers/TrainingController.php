@@ -13,6 +13,8 @@ use App\Models\My_menu_Post;
 use App\Models\User;
 use App\Models\Training as ModelsTraining;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Part_Event;
+
 
 // ※Topやワークアウト関連についてはTrainingControllerで記述する //
 
