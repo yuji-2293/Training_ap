@@ -41,7 +41,7 @@
                       document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
                       $.ajax({
-                      url:  '/event',
+                      url:  'https://kukku999.xsrv.jp/event',
                       type: 'post',
                       data:eventData,
                       headers: {
