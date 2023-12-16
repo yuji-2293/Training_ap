@@ -79,7 +79,7 @@
                     allDaySlot: true,   // 週や日表示で終日が表示される
                     timeZone: "asia/Tokyo",
                     //DB連携=JSONページの読み込み//
-                    events:'http://localhost:8000/calendar',
+                    events:'http://kukku999.xsrv.jp/calendar',
                     //表示しているイベントの内容をtitleだけにする
                     eventContent: function(arg){
                       return {
