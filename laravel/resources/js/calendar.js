@@ -27,7 +27,7 @@
                     eventDurationEditable:true,
                     eventStartEditable:true,
                     droppable:true,
-                    
+
                     eventReceive:function(info){
 
                       var start = info.event.start.toISOString().slice(0,19).replace("T"," ");
@@ -77,7 +77,7 @@
                     allDaySlot: true,   // 週や日表示で終日が表示される
                     timeZone: "asia/Tokyo",
                     //DB連携=JSONページの読み込み//
-                    events:'https://kukku999./calendar',
+                    events:'/calendar',
                     //表示しているイベントの内容をtitleだけにする
                     eventContent: function(arg){
                       return {
