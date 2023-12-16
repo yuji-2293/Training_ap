@@ -60,7 +60,7 @@ Route::get('/my-menu/all',[App\Http\Controllers\TrainingController::class, 'allT
 
 
 //calendarControllerルート//
-Route::post('/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store');
+Route::post('/public/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store');
 
 Route::get('/calendar',[App\Http\Controllers\CalendarController::class, 'index'])->name('calendar.index');
 Route::get('/calendar/{id}' ,[App\Http\Controllers\CalendarController::class, 'destroy'])->name('calendar.delete');
