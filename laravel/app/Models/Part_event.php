@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class part_event extends Model
 {
-    protected $table = 'part_event';
+    protected $table = 'Part_Events';
     protected $fillable = ['title','start','category'];
     protected $dateFormat = 'Y-m-d  H:i:s';
 

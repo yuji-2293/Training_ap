@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\JsonResponse;
 use App\Models\training_part;
 use App\Models\my_menu_post;
-use App\Models\part_event;
+use App\Models\Part_Event;
 
 //Top画面のFullCalendar関連の記述
 
@@ -20,10 +20,10 @@ class CalendarController extends Controller
     public function index(Request $request, $id = -1){
 
             if($id == -1){
-                return part_event::get()->toJson();
+                return Part_Event::get()->toJson();
                 }
                 else {
-                return part_event::find($id)->toJson();
+                return Part_Event::find($id)->toJson();
                 }
     
     }
@@ -31,7 +31,7 @@ class CalendarController extends Controller
     public function store(Request $request){
         $data = $request->all();
 
-        $event = new part_event();
+        $event = new Part_Event();
         $event->title = $data['title'];
         $event->start = $data['start'];
         $event->category = $data ['category'];
@@ -42,7 +42,7 @@ class CalendarController extends Controller
     }
     //FullCalendarの削除機能の処理
     public function destroy($id) {
-        $destroy = part_event::find($id);
+        $destroy = Part_Event::find($id);
         if(!$destroy) {
          return response()->json(['message'=>'イベントが見つかりません'],404);
         }
