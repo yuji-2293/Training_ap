@@ -44,7 +44,7 @@
 
                       $.ajax({
                       url:  '/event/',
-                      type: 'get',
+                      type: 'post',
                       data:eventData,
                       headers: {
                         'X-CSRF-TOKEN' : csrfToken
@@ -79,7 +79,7 @@
                     allDaySlot: true,   // 週や日表示で終日が表示される
                     timeZone: "asia/Tokyo",
                     //DB連携=JSONページの読み込み//
-                    events:'https://kukku999.xsrv.jp/calendar',
+                    events:'https://kukku999./calendar',
                     //表示しているイベントの内容をtitleだけにする
                     eventContent: function(arg){
                       return {
