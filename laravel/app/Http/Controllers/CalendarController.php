@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\JsonResponse;
 use App\Models\training_part;
 use App\Models\my_menu_post;
-use App\Models\Part_event;
+use App\Models\part_event;
 
 //Top画面のFullCalendar関連の記述
 
@@ -31,7 +31,7 @@ class CalendarController extends Controller
     public function store(Request $request){
         $data = $request->all();
 
-        $event = new Part_event();
+        $event = new part_event();
         $event->title = $data['title'];
         $event->start = $data['start'];
         $event->category = $data ['category'];
