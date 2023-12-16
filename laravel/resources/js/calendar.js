@@ -41,8 +41,8 @@
                       document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
                       $.ajax({
-                      url:  'https://kukku999.xsrv.jp/event',
-                      type: 'get',
+                      url:  '/event/',
+                      type: 'post',
                       data:eventData,
                       headers: {
                         'X-CSRF-TOKEN' : csrfToken
