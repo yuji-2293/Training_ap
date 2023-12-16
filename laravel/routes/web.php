@@ -65,7 +65,8 @@ Route::post('/event',[App\Http\Controllers\CalendarController::class, 'store'])-
 
 
 
-Route::get('/calendar',[App\Http\Controllers\CalendarController::class, 'index'])->name('calendar.index');
+Route::get('/calendar',[App\Http\Controllers\CalendarController::class, 'index'])->name('calendar.index')
+->middleware(['no-redirect','web','throttle','csrf']);
 Route::get('/calendar/{id}' ,[App\Http\Controllers\CalendarController::class, 'destroy'])->name('calendar.delete');
 
 Route::get('workouts',[App\Http\Controllers\TrainingController::class,'showOtherWorkouts'])->name('workouts');
