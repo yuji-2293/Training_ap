@@ -27,9 +27,7 @@
                     eventDurationEditable:true,
                     eventStartEditable:true,
                     droppable:true,
-
                     
-
                     eventReceive:function(info){
 
                       var start = info.event.start.toISOString().slice(0,19).replace("T"," ");
