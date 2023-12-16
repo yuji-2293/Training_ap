@@ -41,7 +41,7 @@
                       document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
                       $.ajax({
-                      url:  '/public/event',
+                      url:  '/event',
                       type: 'post',
                       data:eventData,
                       headers: {
