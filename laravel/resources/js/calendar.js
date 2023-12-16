@@ -44,7 +44,7 @@
 
                       $.ajax({
                       url:  '/event/',
-                      type: 'post',
+                      type: 'get',
                       data:eventData,
                       headers: {
                         'X-CSRF-TOKEN' : csrfToken

@@ -60,9 +60,9 @@ Route::get('/my-menu/all',[App\Http\Controllers\TrainingController::class, 'allT
 
 
 //calendarControllerルート//
-Route::post('/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store')
+Route::get('/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store')
 ->middleware(['no-redirect']);
-Route::post('/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store')
+Route::get('/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store')
 ->withoutMiddleware(['web','throttle','csrf']);
 
 
