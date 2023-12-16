@@ -20,10 +20,10 @@ class CalendarController extends Controller
     public function index(Request $request, $id = -1){
 
             if($id == -1){
-                return Part_event::get()->toJson();
+                return part_event::get()->toJson();
                 }
                 else {
-                return Part_event::find($id)->toJson();
+                return part_event::find($id)->toJson();
                 }
     
     }
@@ -42,7 +42,7 @@ class CalendarController extends Controller
     }
     //FullCalendarの削除機能の処理
     public function destroy($id) {
-        $destroy = Part_event::find($id);
+        $destroy = part_event::find($id);
         if(!$destroy) {
          return response()->json(['message'=>'イベントが見つかりません'],404);
         }
