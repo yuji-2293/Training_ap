@@ -60,16 +60,12 @@ Route::get('/my-menu/all',[App\Http\Controllers\TrainingController::class, 'allT
 
 
 //calendarControllerルート//
-Route::post('/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store')
-->middleware(['no-redirect','web','throttle','csrf']);
-
-
+Route::post('/event',[App\Http\Controllers\CalendarController::class, 'store'])->name('calendar.store');
 
 Route::get('/calendar',[App\Http\Controllers\CalendarController::class, 'index'])->name('calendar.index');
 Route::get('/calendar/{id}' ,[App\Http\Controllers\CalendarController::class, 'destroy'])->name('calendar.delete');
 
 Route::get('workouts',[App\Http\Controllers\TrainingController::class,'showOtherWorkouts'])->name('workouts');
 
-Route::post('/trainings/{trainingId}/like',[App\Http\Controllers\LikeController::class,'toggleLike'])->name('training.like')
-;
+Route::post('/trainings/{trainingId}/like',[App\Http\Controllers\LikeController::class,'toggleLike'])->name('training.like');
 
