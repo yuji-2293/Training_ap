@@ -48,18 +48,22 @@
 
                         </div>
                   </div>
+                @Auth
+                @if(!$training->isLikedBy(Auth::user()) )
                 <div class="like-container text-right my-2">
         
                  <button class="like-button" id="like-button-{{ $training->id }}" data-training-id="{{ $training->id }}">
                         <span class="like-status" data-training-id="{{ $training->id }}">
-                                @if($training->likes->where('user_id',Auth::id())->first())
+                                <!-- @if($training->likes->where('user_id',Auth::id())->first())
                                 いいね済み
                                 @else
                                 いいね!!
-                                @endif
+                                @endif -->
+                                <i class="fa-regular fa-heart"></i>
+
                         </span>
                  </button>
-                 <span class="like-count" id="like-count-{{ $training->id }}" data-training-id="{{ $training->id }}" >いいね数×{{ $training->likes->count() }}</span>
+                 <span class="like-count" id="like-count-{{ $training->id }}" data-training-id="{{ $training->id }}" >{{ $training->likes->count() }}</span>
 
                 </div>
             @endforeach

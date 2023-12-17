@@ -25,6 +25,9 @@ class Training extends Model
     public function likes(){
     return $this->hasMany(Like::class);
     }
+    public function isLikedBy($user): bool {
+        return Like::where('user_id', $user->id)->where('training_id', $this->id)->first() !==null;
+    }
     
 
 
