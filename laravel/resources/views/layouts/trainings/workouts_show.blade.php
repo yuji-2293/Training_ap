@@ -63,6 +63,7 @@
 
                 </div>
                 @endif
+                @endAuth
             @endforeach
 
 </li>
