@@ -95,7 +95,7 @@
             console.log(trainingId);
             console.log($button);
             var csrfToken = 
-                      document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+             document.querySelector('meta[name="csrf-token"]').getAttribute('content');
             $.ajax({
                 type: 'POST',
                 url:  `/trainings/{trainingId}/like`,
@@ -118,7 +118,7 @@
                 $StatusElement.text(newText);
                 $CountElement.text(`${data.likeCount} いいね`);
                 console.log(data);
-                location.reload();
+                // location.reload();
 
                 }
                },
