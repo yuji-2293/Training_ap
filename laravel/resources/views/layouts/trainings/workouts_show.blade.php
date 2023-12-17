@@ -62,6 +62,7 @@
                  <span class="like-count" id="like-count-{{ $training->id }}" data-training-id="{{ $training->id }}" >{{ $training->likes->count() }}</span>
 
                 </div>
+                @endif
             @endforeach
 
 </li>
