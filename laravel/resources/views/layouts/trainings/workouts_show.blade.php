@@ -54,11 +54,7 @@
         
                  <button class="like-button" id="like-button-{{ $training->id }}" data-training-id="{{ $training->id }}">
                         <span class="like-status" data-training-id="{{ $training->id }}">
-                                <!-- @if($training->likes->where('user_id',Auth::id())->first())
-                                いいね済み
-                                @else
-                                いいね!!
-                                @endif -->
+
                                 <i class="fa-regular fa-heart"></i>
 
                         </span>
