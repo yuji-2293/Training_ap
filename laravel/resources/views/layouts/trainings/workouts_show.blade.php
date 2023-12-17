@@ -118,7 +118,7 @@
                 $StatusElement.text(newText);
                 $CountElement.text(`${data.likeCount} いいね`);
                 console.log(data);
-                // location.reload();
+                location.reload();
 
                 }
                },
