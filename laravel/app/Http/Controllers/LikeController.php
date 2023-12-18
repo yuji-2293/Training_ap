@@ -42,7 +42,7 @@ class LikeController extends Controller
 
     try {
         return DB::transaction(function () use ($training, $request, $user) {
-            $existingLike = $training->likes()->where('user_id', $user->id)->first();
+            $existingLike = $training->likes()->lockForUpdate()->where('user_id', $user->id)->first();
 
             if ($existingLike) {
                 // すでにいいねが存在する場合は削除

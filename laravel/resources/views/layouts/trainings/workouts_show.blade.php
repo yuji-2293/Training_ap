@@ -79,9 +79,12 @@
 
 </main>
 <script>
-        
+        $(document).ready(function() {
+        let debounceTimer;
         // いいねがクリックされた時
         $(document).on('click','.like-button', function(){
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
             const  $button = $(this);
             const trainingId = $button.data('training-id');
             const csrfToken = $('meta[name="csrf-token"]').attr('content');
@@ -115,8 +118,12 @@
             },
 
         });
+            }, 300);
+
     
+ });
 });
+
 </script>
 
 
