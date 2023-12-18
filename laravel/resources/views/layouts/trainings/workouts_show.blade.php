@@ -94,10 +94,10 @@
                 url:  `/trainings/${trainingId}/like`,
                 data: {
                     training_id: trainingId,
+                    _token: $('meta[name="csrf-token"]').attr('content') // CSRFトークンを含める
+
                 },
-                headers: {
-                        'X-CSRF-TOKEN' : csrfToken
-                      },
+
                 success: function(data) {
             // 成功したらいいね数とボタンのスタイルを更新
                 const $CountElement = $('#like-count-' + trainingId);
