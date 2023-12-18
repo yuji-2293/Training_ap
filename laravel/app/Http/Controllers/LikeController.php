@@ -35,7 +35,6 @@ class LikeController extends Controller
                 }
                 $likeCount = $training->likes()->count();
                 return response()->json(['isLiked' => false, 'likeCount' => $likeCount]);
-                return response()->json(['isLiked' => $isLiked, 'likeCount' => $likeCount, 'like' => $like]);
 
  }
     
