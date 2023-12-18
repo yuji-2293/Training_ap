@@ -85,7 +85,7 @@
             $('.like-button').click(function(){
             const  $button = $(this);
             const trainingId = $button.data('training-id');
-            const csrfToken = $('meta[name="csrf-token"]').getAttribute('content');
+            const csrfToken = $('meta[name="csrf-token"]').attr('content');
             
             $.ajax({
                 type: 'POST',
