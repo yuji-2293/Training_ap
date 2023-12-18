@@ -31,7 +31,9 @@ class LikeController extends Controller
             $isLiked = true;
             } else {
                 // すでにいいねが存在する場合は削除
-                Like::where('training_id', $training_id)->where('user_id',$user_id)->delete();
+                // Like::where('training_id', $training_id)->where('user_id',$user_id)->delete();
+                $existingLike->delete();
+                $isLiked = false;
             }
                 $likeCount = $training->likes()->count();
                 return response()->json(['isLiked' => $isLiked, 'likeCount' => $likeCount]);
