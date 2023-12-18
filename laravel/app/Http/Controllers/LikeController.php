@@ -34,7 +34,8 @@ class LikeController extends Controller
                 Like::where('training_id', $training_id)->where('user_id',$user_id)->delete();
                 }
                 $likeCount = $training->likes()->count();
-                return response()->json(['isLiked' => $isLiked, 'likeCount' => $likeCount]);
+                return response()->json(['isLiked' => false, 'likeCount' => $likeCount]);
+                return response()->json(['isLiked' => $isLiked, 'likeCount' => $likeCount, 'like' => $like]);
 
  }
     
