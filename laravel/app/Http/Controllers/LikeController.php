@@ -55,10 +55,11 @@ class LikeController extends Controller
             $like->user_id = $user->id;
             $like->training_id = $request->input('training_id');
             $like->save();
-
+            $isLiked = true;
+            // いいねの数を取得
             $likeCount = $training->likes()->count();
 
-            return response()->json(['likeCount' => $likeCount, 'like' => $like]);
+            return response()->json(['isLiked' => $isLiked, 'likeCount' => $likeCount, 'like' => $like]);
             }
 
 
