@@ -88,7 +88,7 @@
             
             $.ajax({
                 type: 'POST',
-                url:  `/trainings/{trainingId}/like`,
+                url:  `/trainings/${trainingId}/like`,
                 data: {
                     training_id: trainingId,
                 },
