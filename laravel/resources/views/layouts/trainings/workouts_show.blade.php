@@ -81,8 +81,7 @@
 <script>
         
         // いいねがクリックされた時
-        $(document).ready(function(){
-            $('.like-button').click(function(){
+        $(document).on('click','.like-button', function(){
             const  $button = $(this);
             const trainingId = $button.data('training-id');
             const csrfToken = $('meta[name="csrf-token"]').attr('content');
@@ -116,7 +115,7 @@
             },
 
         });
-    });
+    
 });
 </script>
 
