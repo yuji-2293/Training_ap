@@ -101,7 +101,7 @@
                 const $CountElement = $('#like-count-' + trainingId);
                 const $StatusElement = $button.find('.like-status');
                 // いいね数を更新
-                $countElement.text(data.likeCount);
+                $CountElement.text(data.likeCount);
 
                 if (data.isLiked) {
 
