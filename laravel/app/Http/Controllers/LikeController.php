@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 class LikeController extends Controller
 {
-    public function toggleLike(Training $training, Like $lile,  Request $request)
+    public function toggleLike(Training $training, Like $lile,  Request $request, $trainingId)
 {
    $user_id = Auth::user()->id;
    $training_id = $request->training_id;
