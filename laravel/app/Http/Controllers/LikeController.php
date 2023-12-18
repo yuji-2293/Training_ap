@@ -49,19 +49,19 @@ class LikeController extends Controller
                 $existingLike->delete();
                 $likeCount = $training->likes()->count();
                 return response()->json(['isLiked' => false, 'likeCount' => $likeCount]);
-            }
-
+            } else {
             // いいねが存在していない場合は新規作成
             $like = new Like();
             $like->user_id = $user->id;
             $like->training_id = $request->input('training_id');
             $like->save();
-            $isLiked = true;
 
-            // いいねの数を取得
             $likeCount = $training->likes()->count();
 
-            return response()->json(['isLiked' => $isLiked, 'likeCount' => $likeCount, 'like' => $like]);
+            return response()->json(['likeCount' => $likeCount, 'like' => $like]);
+            }
+
+
         });
     } catch (\Exception $e) {
         Log::error('Toggle Like error: ' . $e->getMessage(), ['user_id' => $user->id, 'training_id' => $request->input('training_id')]);
