@@ -96,6 +96,8 @@
                           if (this.checked) {
                               // チェックボックスがチェックされたらモーダルを表示
                               popupModal.classList.remove('hidden');
+                              console.log('クラスを削除しました');
+
                           } else {
                               // チェックボックスがアンチェックされたらモーダルを非表示に
                               popupModal.classList.add('hidden');
