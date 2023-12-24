@@ -90,7 +90,7 @@
 
                     document.addEventListener('DOMContentLoaded' , () => {
                       const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
-                      const popupModal = document.getElementById('popupModal');
+                      const popupModal = document.getElementById('popup-Modal');
                       let isDeleteMode = false;
                         isDeleteMode = deleteModeCheckbox.checked;
 
@@ -102,7 +102,7 @@
                           popupModal.classList.add('hidden');
                         }
                     });
-                    document.querySelector('[data-modal-hide="popup-modal"]').addEventListener('click', function() {
+                    document.querySelector('[data-modal-hide="popup-Modal"]').addEventListener('click', function() {
                       popupModal.classList.add('hidden');
                   });
                     
