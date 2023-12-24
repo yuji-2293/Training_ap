@@ -87,25 +87,31 @@
                
                     });
                     calendar.render();
-
-                    document.addEventListener('DOMContentLoaded' , () => {
+                    document.addEventListener('DOMContentLoaded', () => {
                       const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
                       const popupModal = document.getElementById('popup-Modal');
-                      let isDeleteMode = false;
-                        isDeleteMode = deleteModeCheckbox.checked;
-
-                        if(isDeleteMode) {
-                        
-                          popupModal.classList.remove('hidden');
-                        }else {
-                        
-                          popupModal.classList.add('hidden');
-                        }
-                    });
-                    document.querySelector('[data-modal-hide="popup-Modal"]').addEventListener('click', function() {
-                      popupModal.classList.add('hidden');
+                      
+                      // 'remove mode' チェックボックスの変更を監視
+                      deleteModeCheckbox.addEventListener('change', function() {
+                          if (this.checked) {
+                              // チェックボックスがチェックされたらモーダルを表示
+                              popupModal.classList.remove('hidden');
+                          } else {
+                              // チェックボックスがアンチェックされたらモーダルを非表示に
+                              popupModal.classList.add('hidden');
+                          }
+                      });
+                  
+                      // モーダル内の閉じるボタンにイベントリスナーを設定
+                      document.querySelectorAll('[data-modal-hide="popup-Modal"]').forEach(button => {
+                          button.addEventListener('click', function() {
+                              popupModal.classList.add('hidden');
+                          });
+                      });
                   });
-                    
+                  
+
+
 
 
                     const partUrls = {
