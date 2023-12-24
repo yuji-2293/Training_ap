@@ -87,12 +87,6 @@
                
                     });
                     calendar.render();
-                    
-                    // const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
-                    // let isDeleteMode = false;
-                    // deleteModeCheckbox.addEventListener('change',function(){
-                    // isDeleteMode = deleteModeCheckbox.checked;
-                    // });
 
                     document.addEventListener('DOMContentLoaded' , () => {
                       const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
