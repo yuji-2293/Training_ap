@@ -88,11 +88,32 @@
                     });
                     calendar.render();
                     
-                    const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
-                    let isDeleteMode = false;
-                    deleteModeCheckbox.addEventListener('change',function(){
-                    isDeleteMode = deleteModeCheckbox.checked;
+                    // const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
+                    // let isDeleteMode = false;
+                    // deleteModeCheckbox.addEventListener('change',function(){
+                    // isDeleteMode = deleteModeCheckbox.checked;
+                    // });
+
+                    document.addEventListener('DOMContentLoaded' , () => {
+                      const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
+                      const popupModal = document.getElementById('popupModal');
+                      let isDeleteMode = false;
+                        isDeleteMode = deleteModeCheckbox.checked;
+
+                        if(isDeleteMode) {
+                        
+                          popupModal.classList.remove('hidden');
+                        }else {
+                        
+                          popupModal.classList.add('hidden');
+                        }
                     });
+                    document.querySelector('[data-modal-hide="popup-modal"]').addEventListener('click', function() {
+                      popupModal.classList.add('hidden');
+                  });
+                    
+
+
                     const partUrls = {
                     胸:'/my-menu/chest',
                     背中:'/my-menu/back',
