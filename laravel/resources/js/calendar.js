@@ -101,12 +101,27 @@
                     document.addEventListener('DOMContentLoaded', () => {
                       const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
                       const popupModal = document.getElementById('popup-modal');
+                      const confirmButton = document.querySelector('[data-modal-hide="popup-modal"]');
+                      const cancelButton = document.querySelectorAll('[data-modal-hide="popup-modal"]')[1];
                       let isDeleteMode = false;
                   
                       // 'remove mode' チェックボックスの変更を監視
                       deleteModeCheckbox.addEventListener('change', function() {
-                          isDeleteMode = deleteModeCheckbox.checked;
-                  
+                        deleteModeCheckbox.addEventListener('change', function() {
+                          popupModal.classList.toggle('hidden', !deleteModeCheckbox.checked);
+                      });
+                      confirmButton.addEventListener('click', function() {
+                        popupModal.classList.add('hidden');
+                        // ここで remove mode を有効化する処理を追加
+                        console.log('Remove mode activated');
+                    });
+                    cancelButton.addEventListener('click', function() {
+                      popupModal.classList.add('hidden');
+                      // ここで remove mode をキャンセルする処理を追加
+                      console.log('Remove mode cancelled');
+                      deleteModeCheckbox.checked = false;
+                  });
+
                           if (isDeleteMode) {
                               // チェックボックスがチェックされたらモーダルを表示
                               popupModal.classList.remove('hidden');
