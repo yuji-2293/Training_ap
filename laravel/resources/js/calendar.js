@@ -102,7 +102,6 @@ let isDeleteMode = false;
 document.addEventListener('DOMContentLoaded', () => {
     const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
     const popupModal = document.getElementById('popup-modal');
-    let isDeleteMode = false;
 
     // 'remove mode' チェックボックスの変更を監視
     deleteModeCheckbox.addEventListener('change', function() {
