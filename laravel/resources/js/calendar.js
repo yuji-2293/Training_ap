@@ -88,6 +88,16 @@
                     });
                     calendar.render();
 
+                    // const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
+                    // let isDeleteMode = false;
+                    // deleteModeCheckbox.addEventListener('change',function(){
+                    // isDeleteMode = deleteModeCheckbox.checked;
+                    // if(isDeleteMode) {
+                    //   alert('remove modeに移行します。削除したいトレーニング部位をクリックしてください');
+                    // } else {
+                    //     alert('remove modeを解除します。トレーニング部位をクリックするとマイトレにジャンプします');
+                    // }
+                    // });
 let isDeleteMode = false;
 document.addEventListener('DOMContentLoaded', () => {
     const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
@@ -95,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 'remove mode' チェックボックスの変更を監視
     deleteModeCheckbox.addEventListener('change', function() {
-      isDeleteMode = this.checked; 
+      isDeleteMode = deleteModeCheckbox.checked; 
         if (isDeleteMode) {
             // チェックボックスがチェックされたらモーダルを表示
             popupModal.classList.remove('hidden');
@@ -166,7 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (parent.css('z-index')!=='auto'){ // allDayイベントでなければz-indexはautoとなる
         let insets = parent.attr('style').split('inset: ').slice(-1)[0].replace(';', '').split(' ')
         insets[1] = '0%'
-        // parent.css({'inset': insets.join(' ')})
         parent.css({top: insets[0], right: insets[1], bottom: insets[2], left: insets[3]})
     }
 }
