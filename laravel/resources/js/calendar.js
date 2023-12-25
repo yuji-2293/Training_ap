@@ -88,11 +88,11 @@
                     });
                     calendar.render();
 
-
                     document.addEventListener('DOMContentLoaded', () => {
                      const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
 
                      deleteModeCheckbox.addEventListener('change',function() {
+                      console.log('Checkbox state changed:', this.checked);
                       if(this.checked) {
                        alert('remove modeに移行します 削除したいトレーニング部位をクリックしてください');
                       } else {
