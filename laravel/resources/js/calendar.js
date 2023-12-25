@@ -88,17 +88,22 @@
                     });
                     calendar.render();
 
-                    var isDeleteMode = false;
-                    document.addEventListener('DOMContentLoaded', () => {
-                     const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
-                     deleteModeCheckbox.addEventListener('change',function() {
-                      console.log('Checkbox state changed:', this.checked);
-                      if(this.checked) {
-                       alert('remove modeに移行します 削除したいトレーニング部位をクリックしてください');
-                      } else {
-                       alert('remove modeを解除します トレーニング部位をクリックするとマイトレにジャンプします');
-                      }
-                    });
+                    // var isDeleteMode = false;
+                    // document.addEventListener('DOMContentLoaded', () => {
+                    //  const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
+                    //  deleteModeCheckbox.addEventListener('change',function() {
+                    //   console.log('Checkbox state changed:', this.checked);
+                    //   if(this.checked) {
+                    //    alert('remove modeに移行します 削除したいトレーニング部位をクリックしてください');
+                    //   } else {
+                    //    alert('remove modeを解除します トレーニング部位をクリックするとマイトレにジャンプします');
+                    //   }
+                    // });
+                    // });
+                    const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
+                    let isDeleteMode = false;
+                    deleteModeCheckbox.addEventListener('change',function(){
+                    isDeleteMode = deleteModeCheckbox.checked;
                     });
                     const partUrls = {
                     胸:'/my-menu/chest',
