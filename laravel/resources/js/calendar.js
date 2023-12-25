@@ -88,9 +88,9 @@
                     });
                     calendar.render();
 
+                    var isDeleteMode = false;
                     document.addEventListener('DOMContentLoaded', () => {
                      const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
-
                      deleteModeCheckbox.addEventListener('change',function() {
                       console.log('Checkbox state changed:', this.checked);
                       if(this.checked) {
