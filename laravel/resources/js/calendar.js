@@ -98,6 +98,7 @@
                     //     alert('remove modeを解除します。トレーニング部位をクリックするとマイトレにジャンプします');
                     // }
                     // });
+let isDeleteMode = false;
 document.addEventListener('DOMContentLoaded', () => {
     const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
     const popupModal = document.getElementById('popup-modal');
