@@ -105,9 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 'remove mode' チェックボックスの変更を監視
     deleteModeCheckbox.addEventListener('change', function() {
-        isDeleteMode = deleteModeCheckbox.checked;
 
-        if (isDeleteMode) {
+        if (this.checked) {
             // チェックボックスがチェックされたらモーダルを表示
             popupModal.classList.remove('hidden');
         } else {

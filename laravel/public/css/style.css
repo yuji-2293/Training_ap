@@ -109,3 +109,6 @@ margin-top: 2px;
     justify-content: center;
     text-align: center;
 }
+.hidden {
+    display: none;
+}
