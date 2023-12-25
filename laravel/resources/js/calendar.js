@@ -105,9 +105,9 @@
                     deleteModeCheckbox.addEventListener('change',function(){
                     isDeleteMode = deleteModeCheckbox.checked;
                     if(isDeleteMode) {
-                      alert('remove modeに移行します 削除したいトレーニング部位をクリックしてください');
+                      alert('remove modeに移行します<br>削除したいトレーニング部位をクリックしてください');
                     } else {
-                        alert('remove modeを解除します トレーニング部位をクリックするとマイトレにジャンプします');
+                        alert('remove modeを解除します<br>トレーニング部位をクリックするとマイトレにジャンプします');
                     }
                     
                     });
