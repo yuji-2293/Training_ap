@@ -98,8 +98,7 @@
                     //     alert('remove modeを解除します。トレーニング部位をクリックするとマイトレにジャンプします');
                     // }
                     // });
-let isDeleteMode = false;
-document.addEventListener('DOMContentLoaded', () => {
+    let isDeleteMode = false;
     const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
     const popupModal = document.getElementById('popup-modal');
 
@@ -116,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // popupModal.classList.add('hidden');
             alert('remove modeを解除します。トレーニング部位をクリックするとマイトレにジャンプします');
         }
-    });
+    
 
     // モーダル内の「No, cancel」ボタンをクリックしたときにモーダルを非表示にする
     document.querySelector('[data-modal-hide="popup-modal"]').addEventListener('click', function() {
