@@ -87,17 +87,6 @@
                
                     });
                     calendar.render();
-
-                    // const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
-                    // let isDeleteMode = false;
-                    // deleteModeCheckbox.addEventListener('change',function(){
-                    // isDeleteMode = deleteModeCheckbox.checked;
-                    // if(isDeleteMode) {
-                    //   alert('remove modeに移行します。削除したいトレーニング部位をクリックしてください');
-                    // } else {
-                    //     alert('remove modeを解除します。トレーニング部位をクリックするとマイトレにジャンプします');
-                    // }
-                    // });
     let isDeleteMode = false;
     const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
     const popupModal = document.getElementById('popup-modal');
