@@ -104,6 +104,12 @@
                     let isDeleteMode = false;
                     deleteModeCheckbox.addEventListener('change',function(){
                     isDeleteMode = deleteModeCheckbox.checked;
+                    if(isDeleteMode) {
+                      alert('remove modeに移行します 削除したいトレーニング部位をクリックしてください');
+                    } else {
+                        alert('remove modeを解除します トレーニング部位をクリックするとマイトレにジャンプします');
+                    }
+                    
                     });
                     const partUrls = {
                     胸:'/my-menu/chest',
