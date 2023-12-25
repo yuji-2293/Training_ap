@@ -89,7 +89,12 @@
                     calendar.render();
 
                     document.addEventListener('DOMContentLoaded', () => {
+                      console.log('Document is ready.'); 
                      const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
+                     if (!deleteModeCheckbox) {
+                      console.error('Checkbox not found.'); // チェックボックスが見つからない場合のエラーログ
+                      return;
+                  }
 
                      deleteModeCheckbox.addEventListener('change',function() {
                       console.log('Checkbox state changed:', this.checked);
