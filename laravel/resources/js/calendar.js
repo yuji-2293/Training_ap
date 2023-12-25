@@ -87,35 +87,19 @@
                
                     });
                     calendar.render();
+
+
                     document.addEventListener('DOMContentLoaded', () => {
-                      const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
-                      const popupModal = document.getElementById('popup-Modal');
-                      
-                      // 'remove mode' チェックボックスの変更を監視
-                      deleteModeCheckbox.addEventListener('change', function() {
-                          if (this.checked) {
-                              // チェックボックスがチェックされたらモーダルを表示
-                              popupModal.classList.remove('hidden');
-                              console.log('クラスを削除しました');
+                     const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
 
-                          } else {
-                              // チェックボックスがアンチェックされたらモーダルを非表示に
-                              popupModal.classList.add('hidden');
-                          }
-                      });
-                  
-                      // モーダル内の閉じるボタンにイベントリスナーを設定
-                      document.querySelectorAll('[data-modal-hide="popup-Modal"]').forEach(button => {
-                          button.addEventListener('click', function() {
-                              popupModal.classList.add('hidden');
-                          });
-                      });
-                  });
-                  
-
-
-
-
+                     deleteModeCheckbox.addEventListener('change',function() {
+                      if(this.checked) {
+                       alert('remove modeに移行します 削除したいトレーニング部位をクリックしてください');
+                      } else {
+                       alert('remove modeを解除します トレーニング部位をクリックするとマイトレにジャンプします');
+                      }
+                    });
+                    });
                     const partUrls = {
                     胸:'/my-menu/chest',
                     背中:'/my-menu/back',
