@@ -108,10 +108,13 @@ document.addEventListener('DOMContentLoaded', () => {
       isDeleteMode = deleteModeCheckbox.checked; 
         if (isDeleteMode) {
             // チェックボックスがチェックされたらモーダルを表示
-            popupModal.classList.remove('hidden');
+            // popupModal.classList.remove('hidden');
+            alert('remove modeに移行します。削除したいトレーニング部位をクリックしてください');
+
         } else {
             // チェックボックスがアンチェックされたらモーダルを非表示に
-            popupModal.classList.add('hidden');
+            // popupModal.classList.add('hidden');
+            alert('remove modeを解除します。トレーニング部位をクリックするとマイトレにジャンプします');
         }
     });
 
