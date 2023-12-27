@@ -58,7 +58,7 @@
             </svg>
         </span>
     </button>
-        <span class="like-count pb-1" id="like-count-{{ $training->id }}" data-training-id="{{ $training->id }}" >
+        <span class="like-count mb-1" id="like-count-{{ $training->id }}" data-training-id="{{ $training->id }}" >
             {{ $training->likes->count() }}
         </span>
 </div>
