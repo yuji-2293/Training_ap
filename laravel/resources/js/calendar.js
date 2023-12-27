@@ -91,6 +91,22 @@
     const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
     const popupModal = document.getElementById('popup-modal');
     const modalOverlay = document.getElementById('modal-overlay');
+    const activeDeleteModeButton = document.getElementById('activateDeleteMode');
+    const cancelModalButton = document.getElementById('cancelModal');
+
+    activeDeleteModeButton.addEventListener('click', function(){
+     isDeleteMode = true;
+     console.log('登録削除モードが有効化されました');
+
+     const deletableElements = document.querySelectorAll('.deletable');
+     deletableElements.forEach(element => {
+         element.classList.add('highlight-delete'); // 例: 削除可能な要素をハイライトする
+     });
+     popupModal.classList.add('hidden');
+     modalOverlay.classList.add('hidden');
+     deleteModeCheckbox.checked = true;
+
+    })
 
     // 'remove mode' チェックボックスの変更を監視
     deleteModeCheckbox.addEventListener('change', function() {

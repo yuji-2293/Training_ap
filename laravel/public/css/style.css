@@ -114,3 +114,8 @@ margin-top: 2px;
     z-index: 40; /* オーバーレイのz-indexはモーダルより低い値 */
     background-color: rgba(0, 0, 0, 0.5); /* 背景色と透明度 */
 }
+/* 削除モードでハイライトするスタイル */
+.highlight-delete {
+    border: 2px solid red; /* 赤い枠線でハイライト */
+    background-color: rgba(255, 0, 0, 0.1); /* 薄い赤背景 */
+}
