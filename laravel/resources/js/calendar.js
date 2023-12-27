@@ -106,7 +106,19 @@
      modalOverlay.classList.add('hidden');
      deleteModeCheckbox.checked = false;
      isDeleteMode = false;
+     enableScroll();
     })
+
+    // スクロールを禁止する関数
+    function disableScroll() {
+      document.body.style.overflow = 'hidden';
+    }
+
+    // スクロールを許可する関数
+    function enableScroll() {
+      document.body.style.overflow = '';
+    }
+
 
     // 'remove mode' チェックボックスの変更を監視
     deleteModeCheckbox.addEventListener('change', function() {
@@ -114,14 +126,14 @@
       popupModal.classList.toggle('hidden', !isDeleteMode);
       modalOverlay.classList.toggle('hidden', !isDeleteMode);
         if (isDeleteMode) {
+            disableScroll();
             // チェックボックスがチェックされたらモーダルを表示
-            document.body.style.overflow = 'hidden';
             popupModal.classList.remove('hidden');
             modalOverlay.classList.remove('hidden');
 
         } else {
+            enableScroll();
             // チェックボックスがアンチェックされたらモーダルを非表示に
-            document.body.style.overflow = ''
             popupModal.classList.add('hidden');
             modalOverlay.classList.add('hidden');
         }
@@ -132,6 +144,7 @@
           this.classList.add('hidden');
           deleteModeCheckbox.checked = false; // チェックボックスをアンチェックにする
           isDeleteMode = false;
+          enableScroll();
       });
 });
 
