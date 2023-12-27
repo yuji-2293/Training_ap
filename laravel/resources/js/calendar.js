@@ -98,15 +98,19 @@
      isDeleteMode = true;
      console.log('登録削除モードが有効化されました');
 
-     const deletableElements = document.querySelectorAll('.deletable');
-     deletableElements.forEach(element => {
-         element.classList.add('highlight-delete'); // 例: 削除可能な要素をハイライトする
-     });
      popupModal.classList.add('hidden');
      modalOverlay.classList.add('hidden');
      deleteModeCheckbox.checked = true;
-
+     isDeleteMode = true;
     });
+
+    cancelModalButton.addEventListener('click', function() {
+     popupModal.classList.add('hidden');
+     modalOverlay.classList.add('hidden');
+     deleteModeCheckbox.checked = false;
+     isDeleteMode = false;
+     console.log('削除モードがキャンセルされました'); 
+    })
 
     // 'remove mode' チェックボックスの変更を監視
     deleteModeCheckbox.addEventListener('change', function() {
