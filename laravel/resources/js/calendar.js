@@ -91,7 +91,7 @@
     const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
     const popupModal = document.getElementById('popup-modal');
     const modalOverlay = document.getElementById('modal-overlay');
-    const activeDeleteModeButton = document.getElementById('activateDeleteMode');
+    const activeDeleteModeButton = document.getElementById('activeDeleteMode');
     const cancelModalButton = document.getElementById('cancelModal');
 
     activeDeleteModeButton.addEventListener('click', function(){
@@ -106,7 +106,7 @@
      modalOverlay.classList.add('hidden');
      deleteModeCheckbox.checked = true;
 
-    })
+    });
 
     // 'remove mode' チェックボックスの変更を監視
     deleteModeCheckbox.addEventListener('change', function() {
