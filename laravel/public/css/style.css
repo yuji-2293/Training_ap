@@ -114,3 +114,10 @@ margin-top: 2px;
     z-index: 40; /* オーバーレイのz-indexはモーダルより低い値 */
     background-color: rgba(0, 0, 0, 0.5); /* 背景色と透明度 */
 }
+#popup-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50; /* 必要に応じてz-indexを調整 */
+}

@@ -96,12 +96,9 @@
 
     activeDeleteModeButton.addEventListener('click', function(){
      isDeleteMode = true;
-     console.log('登録削除モードが有効化されました');
-
      popupModal.classList.add('hidden');
      modalOverlay.classList.add('hidden');
      deleteModeCheckbox.checked = true;
-     isDeleteMode = true;
     });
 
     cancelModalButton.addEventListener('click', function() {
@@ -109,7 +106,6 @@
      modalOverlay.classList.add('hidden');
      deleteModeCheckbox.checked = false;
      isDeleteMode = false;
-     console.log('削除モードがキャンセルされました'); 
     })
 
     // 'remove mode' チェックボックスの変更を監視
@@ -119,11 +115,13 @@
       modalOverlay.classList.toggle('hidden', !isDeleteMode);
         if (isDeleteMode) {
             // チェックボックスがチェックされたらモーダルを表示
+            document.body.style.overflow = 'hidden';
             popupModal.classList.remove('hidden');
             modalOverlay.classList.remove('hidden');
 
         } else {
             // チェックボックスがアンチェックされたらモーダルを非表示に
+            document.body.style.overflow = ''
             popupModal.classList.add('hidden');
             modalOverlay.classList.add('hidden');
         }
