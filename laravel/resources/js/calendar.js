@@ -90,6 +90,7 @@
     let isDeleteMode = false;
     const deleteModeCheckbox = document.getElementById('deleteModeCheckbox');
     const popupModal = document.getElementById('popup-modal');
+    const modalOverlay = document.getElementById('modal-overlay');
 
     // 'remove mode' チェックボックスの変更を監視
     deleteModeCheckbox.addEventListener('change', function() {
@@ -97,10 +98,12 @@
         if (isDeleteMode) {
             // チェックボックスがチェックされたらモーダルを表示
             popupModal.classList.remove('hidden');
+            modalOverlay.classList.remove('hidden');
 
         } else {
             // チェックボックスがアンチェックされたらモーダルを非表示に
             popupModal.classList.add('hidden');
+            modalOverlay.classList.add('hidden');
         }
     
 
