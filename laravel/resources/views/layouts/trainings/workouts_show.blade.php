@@ -49,7 +49,7 @@
                         </div>
                   </div>
 
-<div class="my-2 mx-2 text-right">
+<div class="flex m-0 my-2 mx-2 text-right">
 
     <button class="like-button" id="like-button-{{ $training->id }}" data-training-id="{{ $training->id }}">
         <span class="like-status" data-training-id="{{ $training->id }}">
@@ -58,7 +58,7 @@
             </svg>
         </span>
     </button>
-        <span class="like-count mb-1" id="like-count-{{ $training->id }}" data-training-id="{{ $training->id }}" >
+        <span class="like-count" id="like-count-{{ $training->id }}" data-training-id="{{ $training->id }}" >
             {{ $training->likes->count() }}
         </span>
 </div>
