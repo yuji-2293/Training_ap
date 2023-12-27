@@ -95,6 +95,8 @@
     // 'remove mode' チェックボックスの変更を監視
     deleteModeCheckbox.addEventListener('change', function() {
       isDeleteMode = deleteModeCheckbox.checked; 
+      popupModal.classList.toggle('hidden', !isDeleteMode);
+      modalOverlay.classList.toggle('hidden', !isDeleteMode);
         if (isDeleteMode) {
             // チェックボックスがチェックされたらモーダルを表示
             popupModal.classList.remove('hidden');
@@ -109,10 +111,18 @@
 
     // モーダル内の「No, cancel」ボタンをクリックしたときにモーダルを非表示にする
     document.querySelector('[data-modal-hide="popup-modal"]').addEventListener('click', function() {
-        popupModal.classList.add('hidden');
-        deleteModeCheckbox.checked = false;
-        isDeleteMode = false;
+      popupModal.classList.add('hidden');
+      modalOverlay.classList.add('hidden');
+      deleteModeCheckbox.checked = false; // チェックボックスをアンチェックにする
+      isDeleteMode = false;
     });
+        // オーバーレイをクリックしたときにモーダルを非表示にする
+        modalOverlay.addEventListener('click', function() {
+          popupModal.classList.add('hidden');
+          this.classList.add('hidden');
+          deleteModeCheckbox.checked = false; // チェックボックスをアンチェックにする
+          isDeleteMode = false;
+      });
 });
 
                     
