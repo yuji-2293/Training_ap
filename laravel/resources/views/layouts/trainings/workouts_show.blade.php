@@ -49,7 +49,7 @@
                         </div>
                   </div>
 
-<div class="my-2 mx-2  flex right-0 text-right">
+<div class="my-2 mx-2 text-right">
 
     <button class="like-button" id="like-button-{{ $training->id }}" data-training-id="{{ $training->id }}">
         <span class="like-status" data-training-id="{{ $training->id }}">
