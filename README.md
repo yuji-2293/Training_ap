@@ -4,6 +4,7 @@
 
 
 # DEMO
+<img width="1405" alt="スクリーンショット 2024-01-02 11 00 39" src="https://github.com/yuji-2293/Training_ap/assets/141961535/4e9651d9-7bd8-46a6-bc71-fc4b36eafce2">
 
 
 
