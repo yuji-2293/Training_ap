@@ -8,7 +8,8 @@
 
 ・他のユーザーが行ったトレーニングを共有して見て、イイねすることができる。
 
-#　*URL(https://kukku999.xsrv.jp/)*
+#　 URL
+(https://kukku999.xsrv.jp/)<br>
 
 
 # DEMO画像
