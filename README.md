@@ -30,7 +30,8 @@
 
 # 機能概要
 
-<img width="800" alt="スクリーンショット 2024-01-02 11 00 39" src="https://github.com/yuji-2293/Training_ap/assets/141961535/4e9651d9-7bd8-46a6-bc71-fc4b36eafce2">
+<img width="1400" alt="スクリーンショット 2024-01-03 18 16 49" src="https://github.com/yuji-2293/Training_ap/assets/141961535/b52e4704-1251-4c55-8fcc-1ee2b272bf1d">
+
 
 **TOP画面**
 
