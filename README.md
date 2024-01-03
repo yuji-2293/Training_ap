@@ -22,7 +22,7 @@
 
 ・カレンダー機能
 
-・ユーザーリレーション機能
+**ユーザーリレーション機能**
 
 ・イイね機能（Ajax）
 
@@ -40,11 +40,19 @@ Laravel(Breeze)による認証機能を実装しました
 
 JavaScriptのライブラリFullcalendarを実装しました
 
+## CRUD処理一覧
 <img width="２５０" alt="マイメニュー登録" src="https://github.com/yuji-2293/Training_ap/assets/141961535/66e6ef0d-44af-415d-bd59-5c28b8583b92">
 <img width="５００" alt="マイメニュー編集:削除" src="https://github.com/yuji-2293/Training_ap/assets/141961535/5fb396f0-5d90-45ae-aee7-dc9c663fa1ef">
 
 <img width="５００" alt="部位別の登録" src="https://github.com/yuji-2293/Training_ap/assets/141961535/adaf02c9-e99f-41ec-816f-06ace11e62d7">
 <img width="500" alt="メニュー一覧" src="https://github.com/yuji-2293/Training_ap/assets/141961535/1ad9a3ce-d01c-493b-a203-5a561cb9470c">
+
+マイメニューの登録〜編集、削除までの一連の流れです
+
+
+
+## ユーザーリレーション
+
 <img width="５００" alt="共有画面（イイね！）" src="https://github.com/yuji-2293/Training_ap/assets/141961535/c10541fd-8ceb-4cb9-9add-98ef743746b1">
 
 # 概要
