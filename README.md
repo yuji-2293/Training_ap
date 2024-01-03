@@ -112,6 +112,11 @@ Fullcalendarを使って、その日に行うであろうトレーニング部�
 
 ・MySQL/MriaDB 10.05
 
+# ER図
+
+<img width="942" alt="スクリーンショット 2024-01-03 19 45 08" src="https://github.com/yuji-2293/Training_ap/assets/141961535/5c00573f-bfff-4f4d-aa76-364e12713f7e">
+
+
 # 苦労したこと
 
 一番苦労したことは、Fullcalendarとバックエンドを連携させたところです。
