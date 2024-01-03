@@ -44,9 +44,5 @@
             </x-primary-button>
         </div>
     </form>
-    <!-- ゲストログイン -->
-    <form method="POST" action="{{ url('/guest-login') }}">
-        @csrf
-        <button type="submit">ゲストログイン</button>
-    </form>
+
 </x-guest-layout>
