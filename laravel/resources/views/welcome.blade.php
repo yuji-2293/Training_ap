@@ -19,10 +19,12 @@
                     <div class="py-4 flex space-x-36">
                         <a href="{{'/'}}" class="text-xl font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">TOP</a>
 
-                        <form method="POST" action="{{ url('/guest-login') }}">
+                        <a href="{{'/guest-login'}}" class="text-xl font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">ゲストログイン</a>
+
+                        <!-- <form method="POST" action="{{ url('/guest-login') }}">
                             @csrf
                             <button type="submit">ゲストログイン</button>
-                        </form>
+                        </form> -->
 
                     <!-- Dropdown menu -->
                     <div id="dropdownHover-2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
