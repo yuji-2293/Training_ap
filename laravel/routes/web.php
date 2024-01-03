@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CalendarController;
+use App\Http\Controllers\GuestLoginController;
 use App\Http\Controllers\LikeController;
 use App\Models\OtherUserWorkout;
 use Illuminate\Http\Request;
@@ -68,4 +69,6 @@ Route::get('/calendar/{id}' ,[App\Http\Controllers\CalendarController::class, 'd
 Route::get('workouts',[App\Http\Controllers\TrainingController::class,'showOtherWorkouts'])->name('workouts');
 
 Route::post('/trainings/{trainingId}/like',[App\Http\Controllers\LikeController::class,'toggleLike'])->name('training.like');
+
+Route::post('/guest-login', [App\Http\Controllers\GuestLoginController::class,'store']);
 
