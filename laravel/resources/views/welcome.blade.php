@@ -20,7 +20,7 @@
                         <a href="{{'/'}}" class="text-xl font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">TOP</a>
 
                         <a href="{{'/guest-login'}}" class="text-xl font-semibold  hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">ゲストログイン</a>
-
+                        @method('POST')
                         <!-- <form method="POST" action="{{ url('/guest-login') }}">
                             @csrf
                             <button type="submit">ゲストログイン</button>
