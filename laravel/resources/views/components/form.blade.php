@@ -28,7 +28,7 @@
     <select name="rep" id="rep" class="block appearance-none w-full bg-white border border-gray-300 hover:border-gray-500 px-4 py-2 pr-8
     rounded shadow leading-tight focus:outline-none focus:border-rose-500 focus:ring-rose-500" autocomplete="off">
         @for ($n = 1; $n <= 20; $n++)
-            <option value="{{ $n }}" {{ (session('formInput.rep') == $rep) ? 'selected' : '' }}>{{ $n }}</option>
+            <option value="{{ $n }}" {{ (session('formInput.rep') == $n) ? 'selected' : '' }}>{{ $n }}</option>
         @endfor
     </select>
     </div>
