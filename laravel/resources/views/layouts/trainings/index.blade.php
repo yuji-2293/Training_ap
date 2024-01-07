@@ -9,9 +9,9 @@
  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
 <div class="flex">
     <!-- dashboard -->
-    <div id="dashboard" class="w-1/12 h-80  bg-white text-center m-8 rounded-md shadow">
-            <div class="flex justify-center items-center mx-auto">
-                <div id="categories" class="shadow w-2/3 bg-sky-100  m-2 mt-4 rounded-md" >
+    <div id="dashboard" class="h-80  bg-white text-center m-8 rounded-md shadow">
+            <div class="flex justify-center items-center">
+                <div id="categories" class="shadow bg-sky-100  m-2 mt-4 rounded-md" >
                     <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="胸">胸</div>
                     <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="背中">背中</div>
                     <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="足">足</div>
