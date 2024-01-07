@@ -8,7 +8,7 @@
  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
 <div class="flex">
-    <div class="flex">
+    <div class="flex justify-center items-center">
             <!-- dashboard -->
     <div id="dashboard" class="h-80  bg-white text-center m-8 rounded-md shadow">
         <div id="categories" class="shadow bg-sky-100  m-2 mt-4 rounded-md" >
@@ -26,7 +26,7 @@
         </div>
     </div>
                     <div class="arrow-container mx-5">
-                    <div class="arrow text-4xl animate-blink text-rose-500">→</div> 
+                    <div class="arrow animate-blink text-rose-500">→</div> 
                 </div>
     </div>
 

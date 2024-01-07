@@ -129,6 +129,7 @@ margin-top: 2px;
 }
 .arrow {
     animation: blink 1s linear infinite; /* 点滅アニメーション */
+    font-size: 4rem;
 }
 
 @keyframes blink {
