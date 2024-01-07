@@ -20,7 +20,7 @@
         <div class="mt-6">
             <label class="text-sm font-bold">
                 <input class="text-rose-500 focus:border-rose-500 focus:ring-pink-500" type="checkbox" id="deleteModeCheckbox">
-                remove mode
+                削除
             </label>
         </div>
 
