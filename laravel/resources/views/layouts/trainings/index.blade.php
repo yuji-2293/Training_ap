@@ -9,7 +9,7 @@
  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
 <div class="flex justify-center items-center">
             <!-- dashboard -->
-            <div id="dashboard" class="h-80  bg-white text-center rounded-md shadow">
+            <div id="dashboard" class="h-full  bg-white text-center rounded-md shadow">
                 <div id="categories" class="shadow bg-sky-100  m-2 mt-4 rounded-md" >
                     <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="胸">胸</div>
                     <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="背中">背中</div>
