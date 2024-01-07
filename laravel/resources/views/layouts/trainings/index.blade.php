@@ -10,7 +10,7 @@
 <div class="flex items-start justify-center p-6">
     <div class="flex flex-col mr-8"> 
         <div class="text-center mb-2">
-         <span class="drag-drop-text text-xs text-gray-500 opacity-75 ">これらを<br>ドラッグ＆ドロップします！</span>
+         <span class="drag-drop-text text-xs text-gray-500 opacity-75 ">これらを<br>ドラッグ＆ドロップ！</span>
         </div>
             <!-- dashboard -->
             <div id="dashboard" class="h-full  bg-white text-center rounded-md shadow">
@@ -21,7 +21,7 @@
                     <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="腕or肩">腕or肩</div>
                     <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="その他">その他</div>
                 </div>
-                <div class="mt-3">
+                <div class="mt-3 p-6">
                     <label class="text-xs font-bold">
                         <input class="text-rose-500 focus:border-rose-500 focus:ring-pink-500" type="checkbox" id="deleteModeCheckbox">
                         削除モード切替
@@ -29,7 +29,7 @@
             </div>
     </div>
 
-            <div class="arrow-container mt-12 p-4">
+            <div class="arrow-container mt-12">
                 <div class="arrow animate-blink text-rose-500">→</div> 
             </div>
         <!-- calendarをブラウザに表示 -->
