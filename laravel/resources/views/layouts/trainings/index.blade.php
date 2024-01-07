@@ -8,11 +8,11 @@
  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
 <div class="flex items-start justify-center p-6">
-    <div class="flex flex-col"> 
-        <div class="text-center">
+    <div class="flex flex-col mr-8"> 
+        <div class="text-center mb-2">
          <span class="drag-drop-text text-xs text-gray-500 opacity-75">これらを<br>ドラッグ＆ドロップします！</span>
         </div>
-                    <!-- dashboard -->
+            <!-- dashboard -->
             <div id="dashboard" class="h-full  bg-white text-center rounded-md shadow">
                 <div id="categories" class="shadow bg-sky-100  m-2 mt-4 rounded-md" >
                     <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="胸">胸</div>
@@ -22,16 +22,16 @@
                     <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="その他">その他</div>
                 </div>
                 <div class="mt-6">
-                    <label class="text-sm font-bold">
+                    <label class="text-xs font-bold">
                         <input class="text-rose-500 focus:border-rose-500 focus:ring-pink-500" type="checkbox" id="deleteModeCheckbox">
-                        削除
+                        削除モード切り替え
                     </label>
                 </div>
             </div>
     </div>
 
-            <div class="arrow-container mx-5">
-                <div class="arrow animate-blink text-rose-500 h-10">→</div> 
+            <div class="arrow-container my-5">
+                <div class="arrow animate-blink text-rose-500">→</div> 
             </div>
         <!-- calendarをブラウザに表示 -->
             <div id="app">
