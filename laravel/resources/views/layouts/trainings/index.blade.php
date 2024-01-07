@@ -8,7 +8,7 @@
  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
 <div class="flex items-start justify-center p-6">
-    <div class="flex flex-col mr-8 w-10"> 
+    <div class="flex flex-col mr-8 max-w-10"> 
         <div class="text-center mb-2">
          <span class="drag-drop-text text-xs text-gray-500 opacity-75 ">これらを<br>ドラッグ＆ドロップ！</span>
         </div>
