@@ -119,11 +119,20 @@ margin-top: 2px;
 
     z-index: 50; /* 必要に応じてz-indexを調整 */
 }
+.category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* 矢印の位置決めのために必要 */
+}
+
+.arrow {
+    font-size: 2rem; /* 矢印の大きさ */
+    animation: blink 1s linear infinite; /* 点滅アニメーション */
+    padding-left: 8px; /* 矢印とテキストの間隔 */
+}
+
 @keyframes blink {
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
-}
-
-.animate-blink {
-    animation: blink 1s linear infinite;
 }
