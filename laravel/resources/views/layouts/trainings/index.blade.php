@@ -7,7 +7,7 @@
  @vite('resources/js/calendar.js')
  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
-<div class="flex items-start justify-center">
+<div class="flex items-start justify-center p-2">
             <!-- dashboard -->
             <div id="dashboard" class="h-full  bg-white text-center rounded-md shadow">
                 <div id="categories" class="shadow bg-sky-100  m-2 mt-4 rounded-md" >
