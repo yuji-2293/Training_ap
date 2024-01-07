@@ -94,6 +94,7 @@ JavaScriptのライブラリFullcalendarを実装しました。
 
 
 <img width="1439" alt="スクリーンショット 2024-01-08 1 11 32" src="https://github.com/yuji-2293/Training_ap/assets/141961535/6efa863e-ee45-4020-9674-26e1f7c0af3e">
+<img width="1400" alt="部位別の登録" src="https://github.com/yuji-2293/Training_ap/assets/141961535/953927b9-4544-489a-90fb-87c9f1684d86">
 
 **登録したマイメニューの一覧**
 
