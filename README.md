@@ -32,21 +32,31 @@
 
 <img width="1400" alt="スクリーンショット 2024-01-03 18 16 49" src="https://github.com/yuji-2293/Training_ap/assets/141961535/b52e4704-1251-4c55-8fcc-1ee2b272bf1d">
 
+・**TOP画面**
 
-**TOP画面**
+・トップページにアクセスすると画面が描画されます
+
+・ヘッダーにある**ゲストログイン、ユーザー登録、ログイン**でアプリの機能を利用してもらえます
 
 <img width="1401" alt="ログイン画面" src="https://github.com/yuji-2293/Training_ap/assets/141961535/b3540fa3-a310-4c19-8100-011ba8f69846">
 
-Laravel(Breeze)による認証機能を実装しました
+・**Laravel(Breeze)による認証機能**を実装しました
+
+・Emailとパスワード、名前を登録することでアプリを利用できます。
 
 <img width="５００" alt="カレンダー" src="https://github.com/yuji-2293/Training_ap/assets/141961535/364a2a80-e599-4bac-a64e-eec7812e9489">
 
 JavaScriptのライブラリFullcalendarを実装しました。
 
-「削除」にチェックを入れると登録削除モードになります。
+・**登録部位欄**にあるトレーニング部位をカレンダー日付に**ドラック＆ドロップ**することで**トレーニングの予定を立てられます**
+
+・「削除」にチェックを入れると登録削除モードになります。
 ->カレンダーにある登録部位を**クリックすると**削除することができます
 
 ## CRUD処理一覧
+　
+**マイメニュー登録**
+
 <img width="２５０" alt="マイメニュー登録" src="https://github.com/yuji-2293/Training_ap/assets/141961535/66e6ef0d-44af-415d-bd59-5c28b8583b92">
 
 <img width="５００" alt="マイメニュー編集:削除" src="https://github.com/yuji-2293/Training_ap/assets/141961535/5fb396f0-5d90-45ae-aee7-dc9c663fa1ef">
