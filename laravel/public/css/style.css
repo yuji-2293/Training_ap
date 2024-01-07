@@ -128,7 +128,6 @@ margin-top: 2px;
     justify-content: center; /* 水平方向の中央揃え */
     padding: 0 10px; /* 適宜調整 */
     align-self: flex-start; /* 親要素の上端に揃える */
-    margin-top: 0; /* 上部のマージンを調整 */
 
 }
 .drag-drop-text {
