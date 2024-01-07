@@ -30,28 +30,35 @@
 
 # 機能概要
 
-<img width="1400" alt="スクリーンショット 2024-01-03 18 16 49" src="https://github.com/yuji-2293/Training_ap/assets/141961535/b52e4704-1251-4c55-8fcc-1ee2b272bf1d">
-
 ・**TOP画面**
 
 ・トップページにアクセスすると画面が描画されます
 
 ・ヘッダーにある**ゲストログイン、ユーザー登録、ログイン**でアプリの機能を利用してもらえます
-
-<img width="1401" alt="ログイン画面" src="https://github.com/yuji-2293/Training_ap/assets/141961535/b3540fa3-a310-4c19-8100-011ba8f69846">
+<img width="1400" alt="スクリーンショット 2024-01-03 18 16 49" src="https://github.com/yuji-2293/Training_ap/assets/141961535/b52e4704-1251-4c55-8fcc-1ee2b272bf1d">
 
 ・**Laravel(Breeze)による認証機能**を実装しました
 
 ・Emailとパスワード、名前を登録することでアプリを利用できます。
 
-<img width="５００" alt="カレンダー" src="https://github.com/yuji-2293/Training_ap/assets/141961535/364a2a80-e599-4bac-a64e-eec7812e9489">
+<img width="1401" alt="ログイン画面" src="https://github.com/yuji-2293/Training_ap/assets/141961535/b3540fa3-a310-4c19-8100-011ba8f69846">
 
 JavaScriptのライブラリFullcalendarを実装しました。
 
 ・**登録部位欄**にあるトレーニング部位をカレンダー日付に**ドラック＆ドロップ**することで**トレーニングの予定を立てられます**
 
-・「削除」にチェックを入れると登録削除モードになります。
+<img width="1451" alt="スクリーンショット 2024-01-08 0 51 24" src="https://github.com/yuji-2293/Training_ap/assets/141961535/666bc47b-fd8a-464e-ac25-cb7acc0f1745">
+
+
+
+・トレーニング部位欄の**下部**にある**「削除」**にチェックを入れると登録削除モードになります。
 ->カレンダーにある登録部位を**クリックすると**削除することができます
+
+<img width="５００" alt="カレンダー" src="https://github.com/yuji-2293/Training_ap/assets/141961535/364a2a80-e599-4bac-a64e-eec7812e9489">
+
+<img width="1439" alt="スクリーンショット 2024-01-08 0 49 48" src="https://github.com/yuji-2293/Training_ap/assets/141961535/2ebc5990-8a7c-42c1-ac71-b736fbb722df">
+
+<img width="1419" alt="スクリーンショット 2024-01-08 0 49 57" src="https://github.com/yuji-2293/Training_ap/assets/141961535/208194ee-ce1b-4e50-815b-c9d23b09535a">
 
 ## CRUD処理一覧
 
