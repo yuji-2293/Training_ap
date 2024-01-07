@@ -78,30 +78,39 @@ JavaScriptのライブラリFullcalendarを実装しました。
 
 ## CRUD処理一覧
 
-<img width="２５０" alt="マイメニュー登録" src="https://github.com/yuji-2293/Training_ap/assets/141961535/66e6ef0d-44af-415d-bd59-5c28b8583b92">
-
 **マイメニュー登録**
 
-<img width="５００" alt="マイメニュー編集:削除" src="https://github.com/yuji-2293/Training_ap/assets/141961535/5fb396f0-5d90-45ae-aee7-dc9c663fa1ef">
+
+<img width="２５０" alt="マイメニュー登録" src="https://github.com/yuji-2293/Training_ap/assets/141961535/66e6ef0d-44af-415d-bd59-5c28b8583b92">
 
 **マイメニュー編集.削除**
 
-<img width="５００" alt="部位別の登録" src="https://github.com/yuji-2293/Training_ap/assets/141961535/adaf02c9-e99f-41ec-816f-06ace11e62d7">
+
+<img width="５００" alt="マイメニュー編集:削除" src="https://github.com/yuji-2293/Training_ap/assets/141961535/5fb396f0-5d90-45ae-aee7-dc9c663fa1ef">
 
 **部位別登録**
 
-<img width="500" alt="メニュー一覧" src="https://github.com/yuji-2293/Training_ap/assets/141961535/1ad9a3ce-d01c-493b-a203-5a561cb9470c">
+・カレンダーの削除モードのチェックボックスが空の時に、日付に登録されたトレーニング部位を**クリック**すると、ワークアウト共有画面にワークアウトを共有させることが出来ます。
+
+
+<img width="1439" alt="スクリーンショット 2024-01-08 1 11 32" src="https://github.com/yuji-2293/Training_ap/assets/141961535/6efa863e-ee45-4020-9674-26e1f7c0af3e">
 
 **登録したマイメニューの一覧**
+
+
+<img width="500" alt="メニュー一覧" src="https://github.com/yuji-2293/Training_ap/assets/141961535/1ad9a3ce-d01c-493b-a203-5a561cb9470c">
+
 
 
 
 
 ## ユーザーリレーション
 
+**共有画面（イイね機能付き）**
+
+
 <img width="５００" alt="共有画面（イイね！）" src="https://github.com/yuji-2293/Training_ap/assets/141961535/c10541fd-8ceb-4cb9-9add-98ef743746b1">
 
-**共有画面（イイね機能付き）**
 
 # 概要
 
