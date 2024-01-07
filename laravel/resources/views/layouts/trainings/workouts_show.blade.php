@@ -64,11 +64,10 @@
 </div>
 
 
-            @endforeach
+        @endforeach
 
 </li>
         
-        @break
         
         @endforeach
 </ol>
