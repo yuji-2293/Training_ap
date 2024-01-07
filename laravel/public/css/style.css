@@ -128,11 +128,11 @@ margin-top: 2px;
     justify-content: center; /* 水平方向の中央揃え */
     padding: 0 10px; /* 適宜調整 */
 
-    align-self: start; /* 自分自身を親要素に対して中央に配置 */
 }
 .drag-drop-text {
     /* テキストのスタイリングを追加 */
-    margin-bottom: 4px; /* 矢印との間隔 */
+    margin-bottom: 4px;
+    animation: blink 1s linear infinite; 
 }
 .arrow {
     animation: blink 1s linear infinite; /* 点滅アニメーション */
