@@ -21,10 +21,10 @@
                     <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="腕or肩">腕or肩</div>
                     <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="その他">その他</div>
                 </div>
-                <div class="mt-3 p-2">
+                <div class="mt-3 p-2 flex">
                     <label class="text-xs font-bold">
                         <input class="text-rose-500 focus:border-rose-500 focus:ring-pink-500" type="checkbox" id="deleteModeCheckbox">
-                        削除モード切替
+                        削除モード
                 </div>
             </div>
     </div>
