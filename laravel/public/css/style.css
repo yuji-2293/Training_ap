@@ -120,11 +120,15 @@ margin-top: 2px;
     z-index: 50; /* 必要に応じてz-indexを調整 */
 }
 
-
+/* 矢印のスタイリング */
+.arrow-container {
+    display: flex;
+    align-items: center; /* 垂直方向の中央揃え */
+    justify-content: center; /* 水平方向の中央揃え */
+    height: 100%; /* カテゴリ欄と同じ高さにする */
+}
 .arrow {
-    font-size: 4rem; /* 矢印の大きさ */
     animation: blink 1s linear infinite; /* 点滅アニメーション */
-    padding-left: 8px; /* 矢印とテキストの間隔 */
 }
 
 @keyframes blink {
