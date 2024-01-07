@@ -27,6 +27,7 @@ class TrainingController extends Controller
 
     public function index(Request $request)
     {
+        $request->session()->forget('formInput');
         return view ('layouts.trainings.index');
      }
 
