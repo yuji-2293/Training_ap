@@ -17,7 +17,7 @@
      <select name="weight" id="weight" class=" px-4 py-2 pr-8 block appearance-none w-full bg-white border border-gray-300 hover:border-gray-500
       rounded shadow leading-tight focus:outline-none focus:border-rose-500 focus:ring-rose-500" autocomplete="off">
         @for ($weight = 0; $weight <= 150; $weight+=5)
-            <option value="{{ $weight }}">{{ $weight }} Kg</option>
+            <option value="{{ $weight }}" {{ (session('formInput.weight') == $weight) ? 'selected' : '' }}>{{ $weight }} Kg</option>
         @endfor
      </select>
     </div>
@@ -28,7 +28,7 @@
     <select name="rep" id="rep" class="block appearance-none w-full bg-white border border-gray-300 hover:border-gray-500 px-4 py-2 pr-8
     rounded shadow leading-tight focus:outline-none focus:border-rose-500 focus:ring-rose-500" autocomplete="off">
         @for ($n = 1; $n <= 20; $n++)
-            <option value="{{ $n }}">{{ $n }}</option>
+            <option value="{{ $n }}" {{ (session('formInput.rep') == $rep) ? 'selected' : '' }}>{{ $n }}</option>
         @endfor
     </select>
     </div>
