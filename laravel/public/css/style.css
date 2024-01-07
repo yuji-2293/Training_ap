@@ -125,7 +125,8 @@ margin-top: 2px;
     display: flex;
     align-items: center; /* 垂直方向の中央揃え */
     justify-content: center; /* 水平方向の中央揃え */
-    height: 100%; /* カテゴリ欄と同じ高さにする */
+    padding: 0 20px; /* 適宜調整 */
+
 }
 .arrow {
     animation: blink 1s linear infinite; /* 点滅アニメーション */
