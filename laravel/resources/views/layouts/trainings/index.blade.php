@@ -24,8 +24,7 @@
                 <div class="mt-6">
                     <label class="text-xs font-bold">
                         <input class="text-rose-500 focus:border-rose-500 focus:ring-pink-500" type="checkbox" id="deleteModeCheckbox">
-                        削除モード切り替え
-                    </label>
+                        削除モード切替
                 </div>
             </div>
     </div>
