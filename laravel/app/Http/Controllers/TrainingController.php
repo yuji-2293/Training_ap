@@ -71,7 +71,7 @@ class TrainingController extends Controller
 
     public function showOtherWorkouts(User $user){
     
-        $other_user_trainings = Training::oderBy('other_user_id','created_at','desc')->paginate(3);
+        $other_user_trainings = Training::orderBy('other_user_id','created_at','desc')->paginate(3);
         
         return view('layouts.trainings.workouts_show', ['other_user_trainings' => $other_user_trainings]);
 
