@@ -83,6 +83,7 @@ class TrainingController extends Controller
 
     public function store(Request $request,User $user)
     {
+        $request->session()->put('formInput', $request->all());
 
         $rules = [
             'title' =>'required'|'max:100',
