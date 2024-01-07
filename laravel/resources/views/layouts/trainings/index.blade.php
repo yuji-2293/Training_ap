@@ -7,7 +7,7 @@
  @vite('resources/js/calendar.js')
  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
-<div class="flex justify-center items-center">
+<div class="flex items-start justify-center">
             <!-- dashboard -->
             <div id="dashboard" class="h-full  bg-white text-center rounded-md shadow">
                 <div id="categories" class="shadow bg-sky-100  m-2 mt-4 rounded-md" >
@@ -24,7 +24,9 @@
                     </label>
                 </div>
             </div>
-            <div class="arrow-container mx-5 self-stretch flex items-center m-1">
+            <div class="arrow-container mx-5 flex flex-col justify-center items-center m-1">
+            <span class="drag-drop-text text-xs text-gray-500 opacity-75">ドラック＆ドロップで登録できます</span>
+
             <div class="arrow animate-blink text-rose-500">→</div> 
 
     </div>
