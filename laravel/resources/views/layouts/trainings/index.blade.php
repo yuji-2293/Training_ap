@@ -8,7 +8,11 @@
  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
 <div class="flex items-start justify-center p-6">
-            <!-- dashboard -->
+    <div class="flex flex-col"> 
+        <div class="text-center">
+         <span class="drag-drop-text text-xs text-gray-500 opacity-75">これらをドラッグ＆ドロップします！</span>
+        </div>
+                    <!-- dashboard -->
             <div id="dashboard" class="h-full  bg-white text-center rounded-md shadow">
                 <div id="categories" class="shadow bg-sky-100  m-2 mt-4 rounded-md" >
                     <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="胸">胸</div>
@@ -24,22 +28,17 @@
                     </label>
                 </div>
             </div>
-            <div class="arrow-container mx-5 flex flex-col justify-center items-center">
-            <span class="drag-drop-text text-xs text-gray-500 opacity-75">drag <br>& drop!</span>
-
-            <div class="arrow animate-blink text-rose-500 h-10">→</div> 
-
     </div>
 
-
-
-
-<!-- calendarをブラウザに表示 -->
-    <div id="app">
-        <div class="max-w-7xl">
-            <div id='calendar' class="bg-white p-7 rounded-lg shadow"></div>
-        </div>
-    </div>
+            <div class="arrow-container mx-5">
+                <div class="arrow animate-blink text-rose-500 h-10">→</div> 
+            </div>
+        <!-- calendarをブラウザに表示 -->
+            <div id="app">
+                <div class="max-w-7xl">
+                    <div id='calendar' class="bg-white p-7 rounded-lg shadow"></div>
+                </div>
+            </div>
 </div>
 
 
