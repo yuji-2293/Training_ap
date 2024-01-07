@@ -4,7 +4,7 @@
 
 <ol class="relative max-w-xl mx-auto border-s border-gray-600 dark:border-gray-700">
 @foreach($other_user_trainings as $index => $training)
-@if($index < 3)
+
         <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3
         mt-5 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
             <svg class="w-3.5 h-3.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -69,7 +69,7 @@
 </li>
         @else
         @break
-        @endif
+        
         @endforeach
 </ol>
 
