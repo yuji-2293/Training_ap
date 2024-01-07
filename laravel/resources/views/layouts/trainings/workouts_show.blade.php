@@ -67,7 +67,7 @@
             @endforeach
 
 </li>
-        @else
+        
         @break
         
         @endforeach
