@@ -30,7 +30,7 @@
             </div>
     </div>
 
-            <div class="arrow-container my-5">
+            <div class="arrow-container my-5 mb-5 mt-5">
                 <div class="arrow animate-blink text-rose-500">→</div> 
             </div>
         <!-- calendarをブラウザに表示 -->
