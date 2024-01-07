@@ -10,7 +10,7 @@
 <div class="flex items-start justify-center p-6">
     <div class="flex flex-col mr-8"> 
         <div class="text-center mb-2">
-         <span class="drag-drop-text text-xs text-gray-500 opacity-75 animate-blink">これらを<br>ドラッグ＆ドロップします！</span>
+         <span class="drag-drop-text text-xs text-gray-500 opacity-75 ">これらを<br>ドラッグ＆ドロップします！</span>
         </div>
             <!-- dashboard -->
             <div id="dashboard" class="h-full  bg-white text-center rounded-md shadow">

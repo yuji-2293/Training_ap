@@ -127,12 +127,14 @@ margin-top: 2px;
     flex-direction: column;
     justify-content: center; /* 水平方向の中央揃え */
     padding: 0 10px; /* 適宜調整 */
+    align-self: flex-start; /* 親要素の上端に揃える */
+    margin-top: 0; /* 上部のマージンを調整 */
 
 }
 .drag-drop-text {
     /* テキストのスタイリングを追加 */
     margin-bottom: 4px;
-    animation: blink 1s linear infinite; 
+    animation: blink 1s linear infinite;
 }
 .arrow {
     animation: blink 1s linear infinite; /* 点滅アニメーション */
