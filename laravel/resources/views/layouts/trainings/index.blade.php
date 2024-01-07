@@ -10,7 +10,6 @@
 <div class="flex">
     <!-- dashboard -->
     <div id="dashboard" class="h-80  bg-white text-center m-8 rounded-md shadow">
-            <div class="flex justify-center items-center my-4">
                 <div id="categories" class="shadow bg-sky-100  m-2 mt-4 rounded-md" >
                     <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="胸">胸</div>
                     <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="背中">背中</div>
@@ -23,9 +22,6 @@
                     <div class="arrow text-4xl animate-blink text-rose-500">→</div> 
                 </div>
 
-            </div>
-
-
         <div class="mt-6">
             <label class="text-sm font-bold">
                 <input class="text-rose-500 focus:border-rose-500 focus:ring-pink-500" type="checkbox" id="deleteModeCheckbox">
@@ -37,7 +33,7 @@
 <!-- calendarをブラウザに表示 -->
     <div id="app">
         <div class="m-auto m-7 p-7 max-w-7xl">
-            <div id='calendar' class="bg-white p-7 rounded-lg shadow flex-1"></div>
+            <div id='calendar' class="bg-white p-7 rounded-lg shadow"></div>
         </div>
     </div>
 </div>
