@@ -119,3 +119,11 @@ margin-top: 2px;
 
     z-index: 50; /* 必要に応じてz-indexを調整 */
 }
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.animate-blink {
+    animation: blink 1s linear infinite;
+}

@@ -11,7 +11,13 @@
     <!-- dashboard -->
     <div id="dashboard" class="w-1/12 h-80  bg-white text-center m-8 rounded-md shadow">
         <div id="categories" class="shadow w-2/3 bg-sky-100 mx-auto m-2 mt-4 rounded-md" >
-            <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="胸">胸</div>
+            <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="胸">
+                胸
+                <div class="arrow animate-blink absolute right-0 top-1/2 transform -translate-y-1/2">
+                    →
+                </div>
+            </div>
+            
             <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="背中">背中</div>
             <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="足">足</div>
             <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="腕or肩">腕or肩</div>
