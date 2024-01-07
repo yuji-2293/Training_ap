@@ -25,9 +25,9 @@
                 </div>
             </div>
             <div class="arrow-container mx-5 flex flex-col justify-center items-center m-1">
-            <span class="drag-drop-text text-xs text-gray-500 opacity-75">ドラック＆ドロップ<br>で登録できます</span>
+            <span class="drag-drop-text text-xs text-gray-500 opacity-75">ドラック＆ドロップ!!</span>
 
-            <div class="arrow animate-blink text-rose-500">→</div> 
+            <div class="arrow animate-blink text-rose-500 h-4 ">→</div> 
 
     </div>
 
