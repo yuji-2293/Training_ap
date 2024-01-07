@@ -14,9 +14,7 @@
                 <div class="category p-2 rounded-md border border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  hover:bg-sky-300" data-category="胸">
                  胸
                 </div>            
-                <div class="arrow text-rose-500">
-                →
-                </div> 
+                <div class="arrow text-rose-500">→</div> 
             
    
 
