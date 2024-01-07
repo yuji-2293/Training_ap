@@ -51,7 +51,7 @@ JavaScriptのライブラリFullcalendarを実装しました。
 ・**登録部位欄**にあるトレーニング部位をカレンダー日付に**ドラック＆ドロップ**することで**トレーニングの予定を立てられます**
 
 
-<img width="５００" alt="カレンダー" src="https://github.com/yuji-2293/Training_ap/assets/141961535/364a2a80-e599-4bac-a64e-eec7812e9489">
+<img width="1439" alt="スクリーンショット 2024-01-08 1 11 32" src="https://github.com/yuji-2293/Training_ap/assets/141961535/7ddd74a7-e4a9-4698-81b1-30fcf297b3f6">
 
 ・トレーニング部位欄の下部にある「削除」にチェックを入れると登録削除モードになります。
 ->カレンダーにある登録部位を**クリックすると**削除することができます
@@ -74,7 +74,7 @@ JavaScriptのライブラリFullcalendarを実装しました。
 **ポップアップが表示され、削除することができます**
 
 
-<img width="1419" alt="スクリーンショット 2024-01-08 0 49 57" src="https://github.com/yuji-2293/Training_ap/assets/141961535/208194ee-ce1b-4e50-815b-c9d23b09535a">
+<img width="1419" alt="スクリーンショット 2024-01-08 0 49 57" src="https://github.com/yuji-2293/Training_ap/assets/141961535/da2fe77f-e321-41a8-be87-b64872fe22dc">
 
 ## CRUD処理一覧
 
