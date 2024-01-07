@@ -35,7 +35,9 @@
 ・トップページにアクセスすると画面が描画されます
 
 ・ヘッダーにある**ゲストログイン、ユーザー登録、ログイン**でアプリの機能を利用してもらえます
+
 <img width="1400" alt="スクリーンショット 2024-01-03 18 16 49" src="https://github.com/yuji-2293/Training_ap/assets/141961535/b52e4704-1251-4c55-8fcc-1ee2b272bf1d">
+
 
 ・**Laravel(Breeze)による認証機能**を実装しました
 
@@ -43,9 +45,11 @@
 
 <img width="1401" alt="ログイン画面" src="https://github.com/yuji-2293/Training_ap/assets/141961535/b3540fa3-a310-4c19-8100-011ba8f69846">
 
+
 JavaScriptのライブラリFullcalendarを実装しました。
 
 ・**登録部位欄**にあるトレーニング部位をカレンダー日付に**ドラック＆ドロップ**することで**トレーニングの予定を立てられます**
+
 
 <img width="５００" alt="カレンダー" src="https://github.com/yuji-2293/Training_ap/assets/141961535/364a2a80-e599-4bac-a64e-eec7812e9489">
 
