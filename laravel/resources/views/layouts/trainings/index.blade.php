@@ -15,11 +15,11 @@
             <!-- dashboard -->
             <div id="dashboard" class="h-full  bg-white text-center rounded-md shadow">
                 <div id="categories" class="shadow bg-sky-100 m-2 mt-4 p-4 rounded-md flex flex-col items-center" >
-                    <div class="category mb-4 p-6 flex items-center justify-center w-12 h-12 rounded-full bg-rose-500 text-white text-base font-bold hover:bg-sky-300" data-category="胸">胸</div>
-                    <div class="category mb-4 p-6 flex items-center justify-center w-12 h-12 rounded-full bg-rose-500 text-white text-base font-bold hover:bg-sky-300" data-category="背中">背中</div>
-                    <div class="category mb-4 p-6 flex items-center justify-center w-12 h-12 rounded-full bg-rose-500 text-white text-base font-bold hover:bg-sky-300" data-category="足">足</div>
-                    <div class="category mb-4 p-6 flex items-center justify-center w-12 h-12 rounded-full bg-rose-500 text-white text-base font-bold hover:bg-sky-300" data-category="腕or肩">腕or肩</div>
-                    <div class="category mb-4 p-6 flex items-center justify-center w-12 h-12 rounded-full bg-rose-500 text-white text-base font-bold hover:bg-sky-300" data-category="その他">その他</div>
+                    <div class="category mb-2 p-3 flex items-center justify-center w-12 h-12 rounded-full bg-rose-500 text-white text-base font-bold hover:bg-sky-300" data-category="胸">胸</div>
+                    <div class="category mb-2 p-3 flex items-center justify-center w-12 h-12 rounded-full bg-rose-500 text-white text-base font-bold hover:bg-sky-300" data-category="背中">背中</div>
+                    <div class="category mb-2 p-3 flex items-center justify-center w-12 h-12 rounded-full bg-rose-500 text-white text-base font-bold hover:bg-sky-300" data-category="足">足</div>
+                    <div class="category mb-2 p-3 flex items-center justify-center w-12 h-12 rounded-full bg-rose-500 text-white text-base font-bold hover:bg-sky-300" data-category="腕or肩">腕or肩</div>
+                    <div class="category mb-2 p-3 flex items-center justify-center w-12 h-12 rounded-full bg-rose-500 text-white text-base font-bold hover:bg-sky-300" data-category="その他">その他</div>
                 </div>
                 <div class="mt-3 p-1">
                     <label class="text-xs font-bold">
