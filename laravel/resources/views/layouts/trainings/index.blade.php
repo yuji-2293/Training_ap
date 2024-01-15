@@ -14,12 +14,12 @@
         </div>
             <!-- dashboard -->
             <div id="dashboard" class="h-full  bg-white text-center rounded-md shadow">
-                <div id="categories" class="shadow bg-sky-100  m-2 mt-4 p-4 rouded-md" >
-                    <div class="category p-6 text-center rounded-full border w-12 h-12 border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white text-base font-bold hover:bg-sky-300" data-category="胸">胸</div>
-                    <div class="category p-8 text-center rounded-full border w-12 h-12 border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white text-xs font-bold hover:bg-sky-300" data-category="背中">背中</div>
-                    <div class="category p-6 text-center rounded-full border w-12 h-12 border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white text-base font-bold hover:bg-sky-300" data-category="足">足</div>
-                    <div class="category p-6 text-center rounded-full border w-12 h-12 border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white text-xs font-bold hover:bg-sky-300" data-category="腕or肩">腕or肩</div>
-                    <div class="category p-6 text-center rounded-full border w-12 h-12 border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white text-xs font-bold hover:bg-sky-300" data-category="その他">その他</div>
+                <div id="categories" class="flex flex-col items-center shadow bg-sky-100 m-2 mt-4 p-4 rounded-md" >
+                    <div class="category flex items-center justify-center rounded-full border w-12 h-12 mb-4 border-slate-300 md:hover:bg-sky bg-rose-500 text-white text-base font-bold hover:bg-sky-300" data-category="胸">胸</div>
+                    <div class="category flex items-center justify-center rounded-full border w-12 h-12 mb-4 border-slate-300 md:hover:bg-sky md:hover:bg-sky-300 bg-rose-500 text-white text-xs font-bold hover:bg-sky-300" data-category="背中">背中</div>
+                    <div class="category flex items-center justify-center rounded-full border w-12 h-12 mb-4 border-slate-300 md:hover:bg-sky md:hover:bg-sky-300 bg-rose-500 text-white text-base font-bold hover:bg-sky-300" data-category="足">足</div>
+                    <div class="category flex items-center justify-center rounded-full border w-12 h-12 mb-4 border-slate-300 md:hover:bg-sky md:hover:bg-sky-300 bg-rose-500 text-white text-xs font-bold hover:bg-sky-300" data-category="腕or肩">腕or肩</div>
+                    <div class="category flex items-center justify-center rounded-full border w-12 h-12 mb-4 border-slate-300 md:hover:bg-sky md:hover:bg-sky-300 bg-rose-500 text-white text-xs font-bold hover:bg-sky-300" data-category="その他">その他</div>
                 </div>
                 <div class="mt-3 p-1">
                     <label class="text-xs font-bold">
