@@ -14,7 +14,7 @@
         </div>
             <!-- dashboard -->
             <div id="dashboard" class="h-full  bg-white text-center rounded-md shadow">
-                <div id="categories" class="shadow bg-sky-100  m-2 mt-4 p-4 flex items-center justify-center" >
+                <div id="categories" class="shadow bg-sky-100  m-2 mt-4 p-4 rouded-md" >
                     <div class="category p-6 rounded-full border w-12 h-12 border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  font-bold hover:bg-sky-300" data-category="胸">胸</div>
                     <div class="category p-6 rounded-full border w-12 h-12 border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  font-bold hover:bg-sky-300" data-category="背中">背中</div>
                     <div class="category p-6 rounded-full border w-12 h-12 border border-slate-300 md:hover:bg-sky-300 bg-rose-500 text-white  font-bold hover:bg-sky-300" data-category="足">足</div>
